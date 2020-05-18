@@ -22,6 +22,25 @@ body {
   padding: 20px;
 }
 
+#social-buttons {
+  margin: auto;
+  text-align: center;
+}
+#social-buttons div {
+  display: inline-block;
+}
+#social-buttons i {
+  color: black;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 5rem;
+  width: 5rem;
+  padding: 10px;
+}
+#social-buttons i:hover {
+  color: lightslategray;
+}
+
 .text-centre {
   display: flex;
   justify-content: center;

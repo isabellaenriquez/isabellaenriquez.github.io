@@ -1,3 +1,6 @@
+
+// color scheme: lightslategrey, black, white
+
 h6{
     color: lightslategrey;
 }
@@ -20,6 +23,25 @@ body{
     column-gap: 10px;
     margin: auto;
     padding: 20px;
+}
+
+#social-buttons{
+    margin: auto;
+    text-align: center;
+    div{
+        display: inline-block;
+    }
+    i{
+        color: black;
+        cursor: pointer;
+        font-size: 2.0rem;
+        height: 5rem;
+        width: 5rem;
+        padding: 10px;
+    }
+    i:hover{
+        color: lightslategray;
+    }
 }
 
 .text-centre{
