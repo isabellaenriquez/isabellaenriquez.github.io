@@ -3,13 +3,31 @@ h6 {
 }
 
 body {
-  text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
 }
 
 #logo {
+  display: block;
   margin: auto;
   width: 20%;
+  padding: 20px;
+}
+
+#nav-bar {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10px;
+  margin: auto;
+  padding: 20px;
+}
+
+.text-centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-wrap: auto;
 }
 
 /*# sourceMappingURL=personalstyle.css.map */
