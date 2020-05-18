@@ -7,4 +7,9 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#logo {
+  margin: auto;
+  width: 20%;
+}
+
 /*# sourceMappingURL=personalstyle.css.map */
