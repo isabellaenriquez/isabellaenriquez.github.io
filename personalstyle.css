@@ -7,7 +7,18 @@ body {
   padding: 20px;
 }
 
-#logo {
+#header div {
+  display: flex;
+  align-items: center;
+}
+#header div * {
+  margin: 5px;
+}
+#header div img {
+  height: 4em;
+}
+
+#big-logo {
   display: block;
   margin: auto;
   width: 20%;
@@ -41,12 +52,30 @@ body {
   color: lightslategray;
 }
 
+.new-sect-2, .new-sect-1 {
+  padding: 10rem;
+}
+
+.new-sect-1 {
+  background-color: white;
+  color: black;
+}
+
+.new-sect-2 {
+  background-color: black;
+  color: white;
+}
+
 .text-centre {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow-wrap: auto;
+}
+.text-centre p {
+  color: lightslategray;
+  text-align: center;
 }
 
 /*# sourceMappingURL=personalstyle.css.map */

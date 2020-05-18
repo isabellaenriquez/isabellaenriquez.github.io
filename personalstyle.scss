@@ -10,7 +10,20 @@ body{
     padding: 20px;
 }
 
-#logo{
+#header{
+    div{
+        display: flex;
+        align-items: center;
+        *{
+            margin: 5px;
+        }
+        img{
+            height: 4em;
+        }
+    }
+}
+
+#big-logo{
     display: block;
     margin: auto;
     width: 20%;
@@ -44,10 +57,30 @@ body{
     }
 }
 
+%new-sect{
+    padding: 10rem;
+}
+
+.new-sect-1{
+    @extend %new-sect;
+    background-color: white;
+    color: black;
+}
+
+.new-sect-2{
+    @extend %new-sect;
+    background-color: black;
+    color: white;
+}
+
 .text-centre{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow-wrap: auto;
+    p{
+        color: lightslategray;
+        text-align: center;
+    }
 }
