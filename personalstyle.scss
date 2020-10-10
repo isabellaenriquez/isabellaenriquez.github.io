@@ -7,7 +7,6 @@ h6{
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 20px;
 }
 
 #header{
@@ -58,7 +57,14 @@ body{
 }
 
 %new-sect{
-    padding: 10rem;
+    padding: 5rem;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .new-sect-1{
@@ -83,4 +89,17 @@ body{
         color: lightslategray;
         text-align: center;
     }
+}
+
+table{
+    width: 100%;
+}
+
+.card{
+    margin: 50px;
+}
+
+.card-header{
+    font-weight: bold;
+    color: black;
 }
