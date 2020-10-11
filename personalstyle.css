@@ -96,13 +96,44 @@ table {
   width: 100%;
 }
 
+.row {
+  margin-bottom: 20px;
+}
+
 .card {
-  margin: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
 }
 
 .card-header {
   font-weight: bold;
   color: black;
+}
+
+.project-link {
+  font-style: italic;
+}
+
+.project-date {
+  color: grey;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.project-vid {
+  overflow: hidden;
+  padding-top: 56.25%;
+  /* 16:9*/
+  position: relative;
+  margin-bottom: 10px;
+}
+.project-vid iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=personalstyle.css.map */
