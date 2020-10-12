@@ -34,7 +34,7 @@ body {
 
 #nav-bar {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   column-gap: 10px;
   margin: auto;
   padding: 20px;
@@ -42,6 +42,8 @@ body {
 
 #social-buttons {
   margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
 }
 #social-buttons div {
@@ -50,10 +52,8 @@ body {
 #social-buttons i {
   color: black;
   cursor: pointer;
-  font-size: 2rem;
-  height: 5rem;
+  font-size: 3rem;
   width: 5rem;
-  padding: 10px;
 }
 #social-buttons i:hover {
   color: lightslategray;
@@ -134,6 +134,10 @@ table {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+#footer {
+  padding: 20px;
 }
 
 /*# sourceMappingURL=personalstyle.css.map */
