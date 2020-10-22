@@ -3,10 +3,11 @@
 
 <head>
     <title>ISABELLA ENRIQUEZ</title>
-    <link rel="stylesheet" href="personalstyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/740a5138ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="personalstyle.css">
 </head>
 
 <body>
@@ -18,15 +19,20 @@
     </div>
 
     <div id="nav-bar">
-        <button type="button" class="btn btn-dark" onclick="window.location.href='index.html'">Home</button>
-        <button type="button" class="btn btn-outline-dark"
-            onclick="window.location.href='projects.html'">Projects</button>
+        <a href="index.html" class="my-btn">Home</a>
+        <a href="#skills" class="my-btn">Skills</a>
+        <a href="#interests" class="my-btn">Interests</a>
+        <a href="#courses" class="my-btn">Relevant Coursework</a>
+        <a href="#projects" class="my-btn">Projects</a>
     </div>
 
     <div class="new-sect-1">
-        <img id="headshot" class="logo" src="images/headshot.jpeg">
+        <div id="headshot">
+            
+        </div>
+        <!--img id="headshot" class="logo" src="images/headshot.jpeg"-->
         <div class="text-centre">
-            <h1>Isabella Enriquez is the name...</h1>
+            <h1 id="headline">Isabella Enriquez is the name...</h1>
             <h6>... and coding's my game.</h6>
             <p>
                 Hi there! I see you've found your way to my site. And now you're wondering who I am. So here goes...
@@ -48,9 +54,9 @@
 
         <div id="social-buttons">
             <div>
-                <a href="https://github.com/isabellaenriquez"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/isabella-enriquez-9543851a0/"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:18ipe@queensu.ca"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/isabellaenriquez"><i class="fab fa-github" title="GitHub"></i></a>
+                <a href="https://www.linkedin.com/in/isabella-enriquez-9543851a0/"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
+                <a href="mailto:18ipe@queensu.ca"><i class="fas fa-envelope" title="Email"></i></a>
             </div>
         </div>
 
@@ -58,9 +64,9 @@
             <p>Feel free to reach out, I'm always happy to chat!</p>
         </div>
     </div>
-
-    <div id="skills" class="new-sect-2">
-        <h1>My Skills</h1>
+<hr>
+    <div class="new-sect-1">
+        <div class="text-centre"><h1 id="skills">My Skills</h1></div>
         <div class="row">
             <div class="col">
                 <h3>Programming Languages</h3>
@@ -101,9 +107,9 @@
             </div>
         </div>
     </div>
-
+<hr>
     <div class="new-sect-1">
-        <h1>My Interests</h1>
+        <div class="text-centre"><h1 id="interests">My Interests</h1></div>
         <div class="row">
             <div class="col">
                 <h3>Personal</h3>
@@ -132,9 +138,9 @@
         </div>
 
     </div>
-
-    <div class="new-sect-2">
-        <h1>Relevant Coursework</h1>
+<hr>
+    <div class="new-sect-1">
+        <div class="text-centre"><h1 id="courses">Relevant Coursework</h1></div>
         <h3>At Queen's University</h3>
         <ul>
             <li>CISC 121 (Introduction to Computing Science I)
@@ -168,6 +174,154 @@
                 </div>
             </div>
         </div>-->
+    </div>
+<hr>
+    <div class="new-sect-1">
+        <div class="text-centre">
+            <h1 id="projects">Projects</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="project-vid">
+                                <iframe src="https://www.youtube.com/embed/4kyZ7RuZS3k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class="text-centre">
+
+                                <span class="project-title">KOSMOS — your virtual makeup bag</span>
+                            </div>
+                            <div class="project-tech">
+                                <ul>
+                                    <li>Languages: Python, JavaScript, HTML/CSS</li>
+                                    <li>Frameworks: Django</li>
+                                    <li>Other: RabbitMQ, Celery</li>
+                                </ul>
+                            </div>
+                            <div class="project-sum">
+                                A website to make the makeup buying and owning experience simple and transparent. Built with
+                                Python Django, JavaScript, HTML/CSS, Celery, and RabbitMQ. Capstone project for CS50's Web
+                                Programming with Python and JavaScript.
+    
+                            </div>
+                            <a class="project-link" href="https://github.com/isabellaenriquez/kosmos">See the project
+                                here!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="project-vid">
+                                <iframe src="https://www.youtube.com/embed/gXCTZS_qY-0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="text-centre">
+
+                                <span class="project-title">Network</span>
+                            </div>
+                            <div class="project-tech">
+                                <ul>
+                                    <li>Languages: Python, JavaScript, HTML/CSS</li>
+                                    <li>Frameworks: Django</li>
+                                </ul>
+                            </div>
+                            <div class="project-sum">
+                                A website made for CS50's Web Programming with Python and JavaScript: A simple social media
+                                network.
+                            </div>
+                            <a class="project-link" href="https://github.com/isabellaenriquez/network">See the
+                                project here!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="project-vid">
+                                <iframe src="https://www.youtube.com/embed/sTmE8sPvVIQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="text-centre">
+
+                                <span class="project-title">Wack</span>
+                            </div>
+                            <div class="project-tech">
+                                <ul>
+                                    <li>Languages: Python, JavaScript, HTML/CSS</li>
+                                    <li>Frameworks: Flask</li>
+                                </ul>
+                            </div>
+                            <div class="project-sum">
+                                A simplified clone of Slack built with Python (Flask), HTML/CSS, and JavaScript. SocketIO is
+                                used to power client and server-side communication. Submitted for project 2 of CS50's Web
+                                Programming with Python and JavaScript course (2018 edition).
+                            </div>
+                            <a class="project-link" href="https://github.com/isabellaenriquez/wack">See the
+                                project here!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="project-vid">
+                                <iframe src="https://www.youtube.com/embed/XaUTkiJLEHQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="text-centre">
+
+                                <span class="project-title">Bookworm Wannabe</span>
+                            </div>
+                            <div class="project-tech">
+                                <ul>
+                                    <li>Languages: Python, HTML/CSS, SQL</li>
+                                    <li>Frameworks: Flask, PostgreSQL</li>
+                                </ul>
+                            </div>
+                            <div class="project-sum">
+                                Created for CS50's Web Programming with Python and JavaScript course, Bookworm Wannabe is a
+                                book review website with a PostgreSQL-powered database of 5000 books. On Bookworm Wannabe,
+                                registered users can view book information, including some data attained via the Goodreads API, write
+                                reviews, and read other users' reviews.
+                            </div>
+                            <a class="project-link" href="https://github.com/isabellaenriquez/bookworm-wannabe">See the
+                                project
+                                here!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-centre">
+
+                                <span class="project-title">Bad Ice-Cream</span>
+                            </div>
+                            <div class="project-tech">
+                                <ul>
+                                    <li>Languages: Java</li>
+                                    <li>Collaborator(s): Samantha Hawco</li>
+                                </ul>
+                            </div>
+                            <div class="project-sum">
+                                A Pacman-esque game built with Java, "Bad Ice-Cream" is a
+                                simplified recreation of the titular game by Nitrome. Created in a period of four months as our summative project for ICS4U.
+                            </div>
+                            <a class="project-link" href="https://github.com/isabellaenriquez/Bad-Ice-Cream">See the
+                                project here!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="display: none;">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
