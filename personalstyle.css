@@ -26,24 +26,6 @@ body {
   color: black;
 }
 
-#header div {
-  display: flex;
-  align-items: center;
-}
-#header div * {
-  margin: 5px;
-}
-#header div img {
-  height: 4em;
-}
-
-#big-logo {
-  display: block;
-  margin: auto;
-  width: 20%;
-  padding: 20px;
-}
-
 #headshot {
   border-radius: 50%;
   margin: auto;
@@ -187,8 +169,8 @@ table {
   overflow: hidden;
 }
 
-#footer {
-  padding: 20px;
+#footer img {
+  height: 5vh;
 }
 
 hr {
@@ -202,8 +184,8 @@ hr {
 .tech-tag {
   color: white;
   background-color: black;
-  border-radius: 15px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 0.5rem;
   font-size: small;
   font-weight: bold;
 }
@@ -221,6 +203,16 @@ hr {
 @media only screen and (min-width: 1000px) {
   .card-deck {
     grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #skill-container {
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #skill-container {
+    grid-template-columns: auto;
   }
 }
 
