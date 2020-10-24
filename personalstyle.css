@@ -67,7 +67,7 @@ body {
 
 #skill-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   column-gap: 25px;
   row-gap: 25px;
   margin: auto;
