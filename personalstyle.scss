@@ -22,11 +22,13 @@ body{
     border-width: 1px;
     padding: 5px;
     text-align: center;
+    transition: 1s;
 }
 
 .my-btn:hover{
     background-color: white;
     color: black;
+    transition: 1s;
 }
 
 #headshot{
@@ -57,10 +59,9 @@ body{
     row-gap: 25px;
     margin: auto;
     padding: 50px;
-}
-
-svg{
-    margin: 25px;
+    svg{
+        margin: 3rem;
+    }
 }
 
 #social-buttons{
@@ -76,9 +77,11 @@ svg{
         cursor: pointer;
         font-size: 3rem;
         width: 5rem;
+        transition: 1s;
     }
     i:hover{
-        color: lightslategray;
+        color: lightblue;
+        transition: 1s;
     }
 }
 
@@ -130,7 +133,8 @@ table{
 
 .card{
     height: 100%;
-    border-color: black;
+    border-color: lightgrey;
+    border-radius: 20px;
 }
 
 .project-title{
@@ -194,6 +198,8 @@ hr{
     padding: 0.5rem;
     font-size: small;
     font-weight: bold;
+    display: inline-block;
+    margin-top: 0.5rem;
 }
 
 .project-tech{
@@ -221,5 +227,10 @@ hr{
 @media only screen and (max-width: 600px){
     #skill-container{
         grid-template-columns: auto;
+        padding: 5px;
+        row-gap: 10px;
+        svg{
+            margin: 0;
+        }
     }
 }
