@@ -201,13 +201,13 @@ hr{
     row-gap: 2rem;
 }
 
-@media only screen and (min-width: 1000px){
+@media screen and (min-width: 1000px){
     .card-deck{
         grid-template-columns: auto auto;
     }
 }
 
-@media only screen and (max-width: 1000px){
+@media screen and (max-width: 1000px){
     #skill-container{
         grid-template-columns: auto auto;
         padding: 5px;
@@ -218,7 +218,7 @@ hr{
     }
 }
 
-@media only screen and (max-width: 600px){
+@media screen and (max-width: 600px){
     body{
         font-size: medium;
     }
