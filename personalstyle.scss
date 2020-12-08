@@ -223,6 +223,7 @@ hr{
         font-size: medium;
     }
     #skill-container{
+        grid-template-columns: auto;
         svg{
             margin: 0;
         }
