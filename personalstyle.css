@@ -1,5 +1,8 @@
-h6 {
-  color: lightslategrey;
+@import url("https://fonts.googleapis.com/css2?family=Mukta");
+#headline {
+  color: cadetblue;
+  font-weight: 600;
+  font-style: italic;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -7,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: "Nunito";
+  font-family: "Mukta";
 }
 
 .my-btn {
@@ -52,10 +55,10 @@ body {
 #skill-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  column-gap: 25px;
-  row-gap: 25px;
+  column-gap: 1rem;
+  row-gap: 1rem;
   margin: auto;
-  padding: 50px;
+  padding: 3rem;
 }
 #skill-container svg {
   margin: 3rem;
@@ -63,8 +66,8 @@ body {
 
 #social-buttons {
   margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 #social-buttons div {
@@ -82,25 +85,11 @@ body {
   transition: 1s;
 }
 
-.new-sect-2, .new-sect-1 {
-  padding: 5rem;
-  border-radius: 25px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  border-style: none;
-  border-width: 1px;
-}
-
 .new-sect-1 {
+  padding: 2.5rem;
+  margin: 3rem;
   background-color: white;
   color: black;
-}
-
-.new-sect-2 {
-  background-color: black;
-  color: white;
 }
 
 .text-centre {
@@ -181,8 +170,8 @@ hr {
   margin: 50px;
 }
 
-#headline {
-  padding: 20px;
+#my-name {
+  padding: 5px;
 }
 
 .tech-tag {
@@ -197,13 +186,14 @@ hr {
 }
 
 .project-tech {
-  margin-top: 25px;
+  position: relative;
+  bottom: 0;
 }
 
 .card-deck {
   display: grid;
   grid-template-columns: auto;
-  row-gap: 25px;
+  row-gap: 2rem;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -214,16 +204,24 @@ hr {
 @media only screen and (max-width: 1000px) {
   #skill-container {
     grid-template-columns: auto auto;
-  }
-}
-@media only screen and (max-width: 600px) {
-  #skill-container {
-    grid-template-columns: auto;
     padding: 5px;
     row-gap: 10px;
   }
   #skill-container svg {
+    margin: 1.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: medium;
+  }
+
+  #skill-container svg {
     margin: 0;
+  }
+
+  .new-sect-1 {
+    margin: 0.5rem;
   }
 }
 
