@@ -55,6 +55,10 @@ body {
   column-gap: 10px;
   margin: auto;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
 }
 
 #skill-container {
