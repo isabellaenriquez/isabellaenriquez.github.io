@@ -77,10 +77,11 @@ body{
 }
 
 #interest-container{
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .interest-icon{
+    max-width: 100%;
     img{
         margin: auto;
         width: 100%;
@@ -257,6 +258,9 @@ hr{
         svg{
             margin: 0;
         }
+    }
+    #interest-container{
+        grid-template-columns: auto;
     }
     .new-sect-1{
         margin: 0.5rem;

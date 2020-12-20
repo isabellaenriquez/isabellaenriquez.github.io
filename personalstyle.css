@@ -73,10 +73,11 @@ body {
 }
 
 #interest-container {
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .interest-icon {
+  max-width: 100%;
   text-align: center;
 }
 .interest-icon img {
@@ -250,6 +251,10 @@ hr {
   }
   #skill-container svg {
     margin: 0;
+  }
+
+  #interest-container {
+    grid-template-columns: auto;
   }
 
   .new-sect-1 {
