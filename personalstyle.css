@@ -74,10 +74,11 @@ body {
 
 #interest-container {
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 
 .interest-icon {
-  max-width: 100%;
+  max-width: 75%;
   text-align: center;
 }
 .interest-icon img {
