@@ -45,8 +45,6 @@ body{
     border-radius: 50%;
     margin: auto;
     margin-bottom: 10px;
-    /*width: 300px; 
-    height: 300px;*/
     min-width: 300px;
     min-height: 300px;
     width: 25vw;
@@ -118,9 +116,11 @@ body{
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
-    div{
+    /*div{
         display: inline-block;
-    }
+    }*/
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     i{
         color: black;
         cursor: pointer;
@@ -277,6 +277,7 @@ hr{
         svg{
             margin: 0;
         }
+        row-gap: 2.5rem;
     }
     #interest-container{
         grid-template-columns: auto;
