@@ -11,6 +11,7 @@ html{
     color: cadetblue;
     font-weight: 600;
     font-style: italic;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -44,8 +45,12 @@ body{
     border-radius: 50%;
     margin: auto;
     margin-bottom: 10px;
-    width: 300px; 
-    height: 300px;
+    /*width: 300px; 
+    height: 300px;*/
+    min-width: 300px;
+    min-height: 300px;
+    width: 25vw;
+    height: 25vw;
     display: block;
     box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.5);
     background-image: url('images/headshot.jpeg');
@@ -67,6 +72,11 @@ body{
 
 #home{
     padding-top: 100px;
+}
+
+#home-div{
+    display: grid;
+    grid-template-columns: auto;
 }
 
 #skill-container{
@@ -239,6 +249,14 @@ hr{
 @media screen and (min-width: 1000px){
     .card-deck{
         grid-template-columns: auto auto;
+    }
+    #home-div{
+        grid-template-columns: auto auto;
+        padding: 0 2.5rem 0 2.5rem;
+        column-gap: 2.5rem;
+        div{
+            max-width: 40vw;
+        }
     }
 }
 
