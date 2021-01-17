@@ -111,11 +111,8 @@ body {
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: center;
-  /*div{
-      display: inline-block;
-  }*/
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
 }
 #social-buttons i {
   color: black;
