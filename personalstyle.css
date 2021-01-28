@@ -85,7 +85,7 @@ body {
 }
 
 .interest-icon {
-  max-width: 75%;
+  max-width: 50%;
   text-align: center;
 }
 .interest-icon img {
@@ -208,7 +208,7 @@ table {
 }
 
 hr {
-  margin: 50px;
+  margin: 3rem;
 }
 
 #my-name {
@@ -252,26 +252,22 @@ hr {
   }
 }
 @media screen and (max-width: 1000px) {
-  #skill-container {
+  #skill-container, #interest-container {
     grid-template-columns: auto auto;
     padding: 5px;
     row-gap: 10px;
   }
-  #skill-container svg {
+  #skill-container svg, #interest-container svg {
     margin: 1.5rem;
   }
 }
 @media screen and (max-width: 600px) {
-  #skill-container {
+  #skill-container, #interest-container {
     grid-template-columns: auto;
     row-gap: 2.5rem;
   }
-  #skill-container svg {
+  #skill-container svg, #interest-container svg {
     margin: 0;
-  }
-
-  #interest-container {
-    grid-template-columns: auto;
   }
 
   .new-sect-1 {

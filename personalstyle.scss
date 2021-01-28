@@ -90,7 +90,7 @@ body{
 }
 
 .interest-icon{
-    max-width: 75%;
+    max-width: 50%;
     img{
         margin: auto;
         width: 100%;
@@ -214,7 +214,7 @@ table{
 }
 
 hr{
-    margin: 50px;
+    margin: 3rem;
 }
 
 #my-name{
@@ -258,7 +258,7 @@ hr{
 }
 
 @media screen and (max-width: 1000px){
-    #skill-container{
+    #skill-container, #interest-container{
         grid-template-columns: auto auto;
         padding: 5px;
         row-gap: 10px;
@@ -269,15 +269,12 @@ hr{
 }
 
 @media screen and (max-width: 600px){
-    #skill-container{
+    #skill-container, #interest-container{
         grid-template-columns: auto;
         svg{
             margin: 0;
         }
         row-gap: 2.5rem;
-    }
-    #interest-container{
-        grid-template-columns: auto;
     }
     .new-sect-1{
         margin: 0.5rem;
