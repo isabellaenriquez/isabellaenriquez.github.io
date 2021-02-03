@@ -81,6 +81,7 @@ body{
     grid-template-columns: auto auto auto auto;
     svg{
         margin: 3rem;
+        visibility: hidden;
     }
 }
 
@@ -279,4 +280,8 @@ hr{
     .new-sect-1{
         margin: 0.5rem;
     }
+}
+
+.delay-animate {
+    animation-delay: 3s;
 }
