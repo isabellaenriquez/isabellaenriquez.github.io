@@ -103,6 +103,10 @@ body {
   row-gap: 5rem;
   margin: auto;
 }
+#skill-container svg, #interest-container svg {
+  justify-self: center;
+  width: 60%;
+}
 
 #social-buttons {
   margin: 1rem 0;
@@ -286,8 +290,8 @@ hr {
     grid-template-columns: auto auto;
   }
 }
-@media screen and (max-width: 700px) {
-  #interest-container {
+@media screen and (max-width: 768px) {
+  #skill-container, #interest-container {
     grid-template-columns: auto;
     row-gap: 1rem;
   }
@@ -301,7 +305,7 @@ hr {
   }
 
   .new-sect-1 {
-    padding: 2.5rem;
+    padding: 5rem 1rem;
   }
 
   hr {
@@ -309,7 +313,7 @@ hr {
   }
 
   #projects {
-    padding: 2.5rem 0;
+    padding: 5rem 0;
   }
 
   .project-links i {

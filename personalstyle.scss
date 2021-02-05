@@ -110,6 +110,11 @@ body{
     column-gap: 5rem;
     row-gap: 5rem;
     margin: auto;
+    
+    svg {
+        justify-self: center;
+        width: 60%;
+    }
 }
 
 #social-buttons{
@@ -306,8 +311,8 @@ hr {
     }
 }
 
-@media screen and (max-width: 700px){
-    #interest-container{
+@media screen and (max-width: 768px){
+    #skill-container, #interest-container{
         grid-template-columns: auto;
         row-gap: 1rem;
     }
@@ -318,13 +323,13 @@ hr {
         padding-bottom: 1.25rem;
     }
     .new-sect-1 {
-        padding: 2.5rem;
+        padding: 5rem 1rem;
     }
     hr {
         margin: 0 5rem;
     }
     #projects {
-        padding: 2.5rem 0;
+        padding: 5rem 0;
     }
     .project-links i {
         font-size: 1.5rem;
