@@ -1,17 +1,8 @@
-/*const projects = [
-    {
-        'name': 'Bad Ice-Cream',
-        'date': new Date(2019, 0, 8, 0, 0, 0, 0),
-        'tech': ['Java'],
-        'images': [],
-        'description': ''
-    }
-
-];*/
 
 // for animations!
 document.addEventListener('DOMContentLoaded', () => {
     const skills = document.getElementById('skill-container').children;
+    const interests = document.getElementById('interest-container').children;
 
     // listen for scroll event and call animate function
     document.addEventListener('scroll', animate);
@@ -47,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let element = skills[i];
             // only animate first time site is loaded
             if (isInView(element) && !element.style.visibility) {
-                console.log(element)
+                //console.log(element)
                 element.style.visibility = 'visible';
                 element.classList.add('animate__animated', 'animate__fadeInLeft');
             }
