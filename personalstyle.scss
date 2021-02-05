@@ -144,12 +144,17 @@ body{
     }
 }
 
+#home {
+    padding-top: 7.5rem;
+}
+
 hr {
     margin: 0 10rem;
 }
 
 #projects {
     padding: 5rem 0;
+    text-align: center;
 }
 
 .text-centre{
@@ -214,6 +219,10 @@ hr {
     width: 100%;
 }
 
+#projects-btn {
+    margin: 2.5rem 0;
+    padding: 1rem;
+}
 
 .tech-tag{
     color: black;
