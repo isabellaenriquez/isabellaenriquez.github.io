@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6{
 
 body{
     font-family: "Mukta", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    //padding: 5rem;
 }
 
 .my-btn{
@@ -47,9 +46,6 @@ body{
 #headshot{
     border-radius: 50%;
     margin: auto;
-    /*margin-bottom: 10px;
-    min-width: 300px;
-    min-height: 300px;*/
     width: 25vw;
     height: 25vw;
     display: block;
@@ -121,8 +117,7 @@ body{
     margin: 1rem 0;
     text-align: center;
     display: flex;
-    justify-content: space-evenly;
-    //grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
     i{
         color: black;
         cursor: pointer;
@@ -300,6 +295,15 @@ hr {
     text-align: center;
 }
 
+footer {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+#credits {
+    font-size: small;
+}
+
 @media screen and (min-width: 1000px){
     #projects-container{
         grid-template-columns: auto auto;
@@ -333,6 +337,7 @@ hr {
     }
     .new-sect-1 {
         padding: 5rem 1rem;
+        box-sizing: border-box;
     }
     hr {
         margin: 0 5rem;
@@ -346,8 +351,4 @@ hr {
     .project-info {
         padding: 1rem;
     }
-}
-
-.delay-animate {
-    animation-delay: 3s;
 }

@@ -2,7 +2,7 @@
 // for animations!
 document.addEventListener('DOMContentLoaded', () => {
     const skills = document.getElementById('skill-container').children;
-    const interests = document.getElementById('interest-container').children;
+    //const interests = document.getElementById('interest-container').children;
 
     // listen for scroll event and call animate function
     document.addEventListener('scroll', animate);
