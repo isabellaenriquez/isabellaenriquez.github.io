@@ -156,6 +156,7 @@ hr {
 #intro-text {
   color: slategrey;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .card {
@@ -340,6 +341,15 @@ footer {
 
   .project-info {
     padding: 1rem;
+  }
+
+  #headshot {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  #intro-text p {
+    width: 90%;
   }
 }
 
