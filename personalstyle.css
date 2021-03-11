@@ -65,9 +65,10 @@ body {
   background-color: white;
 }
 
-#home-div {
+#home {
   display: grid;
   grid-template-columns: auto;
+  padding-top: 7.5rem;
 }
 
 #skill-container {
@@ -106,20 +107,21 @@ body {
   width: 60%;
 }
 
-#social-buttons {
+.social-buttons {
   margin: 1rem 0;
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
-#social-buttons i {
+.social-buttons i {
   color: black;
   cursor: pointer;
   font-size: 3rem;
   width: 5rem;
   transition: 1s;
 }
-#social-buttons i:hover {
+.social-buttons i:hover {
   color: lightblue;
   transition: 1s;
 }
@@ -130,10 +132,6 @@ body {
 .new-sect-1 h1 {
   padding-bottom: 5rem;
   text-align: center;
-}
-
-#home {
-  padding-top: 7.5rem;
 }
 
 hr {
@@ -294,12 +292,12 @@ footer {
     grid-template-columns: auto auto;
   }
 
-  #home-div {
+  #home {
     grid-template-columns: auto auto;
-    padding: 0 2.5rem 0 2.5rem;
+    padding: 7.5rem 2.5rem;
     column-gap: 2.5rem;
   }
-  #home-div #intro-text {
+  #home #intro-text {
     max-width: 40vw;
   }
 }
@@ -348,8 +346,12 @@ footer {
     height: 50vw;
   }
 
-  #intro-text p {
-    width: 90%;
+  .social-buttons {
+    justify-content: center;
+    align-content: space-between;
+  }
+  .social-buttons i {
+    width: 3.5rem;
   }
 }
 

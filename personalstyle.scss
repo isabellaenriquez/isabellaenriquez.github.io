@@ -70,9 +70,10 @@ body{
 }
 
 // mobile first
-#home-div{
+#home {
     display: grid;
     grid-template-columns: auto;
+    padding-top: 7.5rem;
 }
 
 // not mobile first
@@ -114,11 +115,12 @@ body{
     }
 }
 
-#social-buttons{
+.social-buttons{
     margin: 1rem 0;
     text-align: center;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     i{
         color: black;
         cursor: pointer;
@@ -138,10 +140,6 @@ body{
         padding-bottom: 5rem;
         text-align: center;
     }
-}
-
-#home {
-    padding-top: 7.5rem;
 }
 
 hr {
@@ -310,9 +308,9 @@ footer {
     #projects-container{
         grid-template-columns: auto auto;
     }
-    #home-div{
+    #home {
         grid-template-columns: auto auto;
-        padding: 0 2.5rem 0 2.5rem;
+        padding: 7.5rem 2.5rem;
         column-gap: 2.5rem;
         #intro-text{
             max-width: 40vw;
@@ -357,7 +355,11 @@ footer {
         width: 50vw;
         height: 50vw;
     }
-    #intro-text p {
-        width: 90%;
+    .social-buttons {
+        justify-content: center;
+        align-content: space-between;
+        i {
+            width: 3.5rem;
+        }
     }
 }
