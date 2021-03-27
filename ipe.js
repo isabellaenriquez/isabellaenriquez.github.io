@@ -1,11 +1,30 @@
 
 // for animations!
 document.addEventListener('DOMContentLoaded', () => {
+    //console.log('loaded');
     const skills = document.getElementById('skill-container').children;
     //const interests = document.getElementById('interest-container').children;
 
     // listen for scroll event and call animate function
     document.addEventListener('scroll', animate);
+
+    
+    const name = document.getElementById('my-name');
+    name.addEventListener('click', () =>{
+        name.style.visibility = 'hidden';
+        name.classList.remove('animate__animated', 'animate__tada');
+        showName();
+    });
+
+    showName();
+
+    function showName() {
+        if (isInView(name) && (!name.style.visibility || name.style.visibility == 'hidden')) {
+            name.style.visibility = 'visible';
+            name.classList.add('animate__animated', 'animate__tada');
+        }
+    }
+
 
     // check if element is in view
     function isInView(element) {
@@ -13,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const windowHeight = window.innerHeight;
         // get number of pixels that the document is scrolled
         let scrollPixels = window.scrollY || window.pageYOffset;
-        
+
         // get height of individual element
         let elementHeight = element.clientHeight;
 
@@ -32,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // animate certain elements when they are in view
     function animate() {
-        
+
         // animate skills
         for (let i = 0; i < skills.length; i++) {
             let element = skills[i];
@@ -44,4 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    /*document.getElementsByClassName('resume').foreach((button) => {
+        button.addEventListener('click', () =>{
+            // open popup 
+            //<embed src="resume.pdf" height="100vh" width="auto"/>
+        })
+    })*/
 });

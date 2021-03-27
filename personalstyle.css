@@ -53,16 +53,33 @@ body {
 }
 
 #nav-bar {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  column-gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: auto;
   padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: #fcfcfc;
+}
+#nav-bar img {
+  height: auto;
+  width: auto;
+  max-height: 25px;
+}
+
+#nav-buttons {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  column-gap: 0.5rem;
+}
+#nav-buttons a {
+  padding: 0.25rem;
+  text-align: center;
+  font-weight: bold;
+  color: black;
 }
 
 #home {
@@ -122,7 +139,7 @@ body {
   transition: 1s;
 }
 .social-buttons i:hover {
-  color: lightblue;
+  color: cadetblue;
   transition: 1s;
 }
 
@@ -276,6 +293,9 @@ hr {
 #my-name {
   padding: 1rem;
   text-align: center;
+  color: black;
+  visibility: hidden;
+  --animate-duration: 2s;
 }
 
 footer {
