@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mukta");
+@import url("https://fonts.googleapis.com/css2?family=Lato");
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: "Mukta", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   word-wrap: break-word;
 }
 
