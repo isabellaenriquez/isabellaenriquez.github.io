@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     const name = document.getElementById('my-name');
-    name.addEventListener('click', () =>{
+    name.addEventListener('mouseover', () =>{
         name.style.visibility = 'hidden';
         name.classList.remove('animate__animated', 'animate__tada');
         showName();
     });
 
-    showName();
+    showName(); // put a timer here at some point
 
     function showName() {
         if (isInView(name) && (!name.style.visibility || name.style.visibility == 'hidden')) {
