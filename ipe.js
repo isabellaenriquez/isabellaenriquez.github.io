@@ -2,28 +2,23 @@
 // for animations!
 document.addEventListener('DOMContentLoaded', () => {
     //console.log('loaded');
-    const skills = document.getElementById('skill-container').children;
+    const skillContainer = document.getElementById('skill-container');
+    const skills = skillContainer.children;
     //const interests = document.getElementById('interest-container').children;
+
+
+    const home = document.getElementById('home');
+    const headshot = document.getElementById('headshot');
+    const about = document.getElementById('about');
+    const aboutTitle = document.getElementById('about-title');
+    const skillTitle = document.getElementById('skill-title');
+    const projects = document.getElementById('projects');
+    const projectsTitle = document.getElementById('featured-projects');
+    animate();
+
 
     // listen for scroll event and call animate function
     document.addEventListener('scroll', animate);
-
-    
-    const name = document.getElementById('my-name');
-    name.addEventListener('mouseover', () =>{
-        name.style.visibility = 'hidden';
-        name.classList.remove('animate__animated', 'animate__tada');
-        showName();
-    });
-
-    showName(); // put a timer here at some point
-
-    function showName() {
-        if (isInView(name) && (!name.style.visibility || name.style.visibility == 'hidden')) {
-            name.style.visibility = 'visible';
-            name.classList.add('animate__animated', 'animate__tada');
-        }
-    }
 
 
     // check if element is in view
@@ -42,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let elementY = element.getBoundingClientRect().top + scrollPixels + elementHeight;
 
         // if scroll position > element position, then element is in view
-        if (currentScroll > elementY) {
+        if (currentScroll >= elementY) {
             return true;
         }
 
@@ -51,6 +46,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // animate certain elements when they are in view
     function animate() {
+        // animate home
+        if (isInView(headshot) && (!home.style.visibility || home.style.visibility === 'hidden')) {
+            home.style.visibility = 'visible';
+            home.classList.add('animate__animated', 'animate__slower', 'animate__fadeIn');
+        }
+
+        if (isInView(aboutTitle) && (!about.style.visibility || about.style.visibility === 'hidden')) {
+            about.style.visibility = 'visible';
+            about.classList.add('animate__animated', 'animate__slow', 'animate__fadeIn');
+        }
+
+        if (isInView(skillTitle) && (!skillTitle.style.visibility || skillTitle.style.visibility === 'hidden')) {
+            skillTitle.style.visibility = 'visible';
+            skillTitle.classList.add('animate__animated', 'animate__slow', 'animate__fadeIn');
+        }
+
+        if (isInView(projectsTitle) && (!projects.style.visibility || projects.style.visibility === 'hidden')) {
+            projects.style.visibility = 'visible';
+            projects.classList.add('animate__animated', 'animate__slow', 'animate__fadeIn');
+        }
 
         // animate skills
         for (let i = 0; i < skills.length; i++) {
@@ -59,15 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isInView(element) && !element.style.visibility) {
                 //console.log(element)
                 element.style.visibility = 'visible';
-                element.classList.add('animate__animated', 'animate__fadeInLeft');
+                element.classList.add('animate__animated', 'animate__fadeIn');
             }
         }
-    }
 
-    /*document.getElementsByClassName('resume').foreach((button) => {
-        button.addEventListener('click', () =>{
-            // open popup 
-            //<embed src="resume.pdf" height="100vh" width="auto"/>
-        })
-    })*/
+    }
 });

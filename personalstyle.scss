@@ -12,10 +12,18 @@ html{
     box-sizing: inherit;
 }
 
+main {
+    min-height: 100vh;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
 #headline{
     color: cadetblue;
     font-weight: 600;
     text-align: center;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -50,10 +58,11 @@ body{
     width: 25vw;
     height: 25vw;
     display: block;
-    box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 10px 7px rgba(0, 0, 0, 0.5);
     background-image: url('images/headshot.jpeg');
     background-size: cover;
     background-clip: content-box;
+    margin-bottom: 1rem; 
 }
 
 #nav-bar{
@@ -63,6 +72,7 @@ body{
     margin: auto;
     padding: 1rem;
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -76,7 +86,7 @@ body{
 
 #nav-buttons {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
     column-gap: 0.5rem;
     a {
         padding: 0.25rem;
@@ -88,9 +98,18 @@ body{
 
 // mobile first
 #home {
+    text-align: center;
+    padding-top: 2.5rem;
+    visibility: hidden;
+}
+#home-grid {
     display: grid;
     grid-template-columns: auto;
     padding-top: 7.5rem;
+}
+
+#about, #skill-title, #projects {
+    visibility: hidden;
 }
 
 // not mobile first
@@ -136,6 +155,7 @@ body{
     margin: 1rem 0;
     text-align: center;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     i{
@@ -153,14 +173,10 @@ body{
 
 .new-sect-1{
     padding: 5rem;
-    h1 {
+    /*h1 {
         padding-bottom: 5rem;
         text-align: center;
-    }
-}
-
-hr {
-    margin: 0 10rem;
+    }*/
 }
 
 #projects {
@@ -201,7 +217,7 @@ hr {
     i{
         color: white;
         cursor: pointer;
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding: 0 0.25rem;
         transition: 1s;
     }
@@ -210,23 +226,6 @@ hr {
         transition: 1s;
     }
 }
-
-/* not currently used
-.project-vid{
-    overflow: hidden;
-    padding-top: 56.25%; // 16:9
-    position: relative;
-    margin-bottom: 10px;
-    iframe{    
-        border: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    } 
-}*/
-
 .project-img{
     width: 100%;
 }
@@ -307,34 +306,73 @@ hr {
     }
 }
 
-#my-name{
-    padding: 1rem;
-    text-align: center;
-    color: black;
-    visibility: hidden;
-    --animate-duration: 2s;
-}
-
 footer {
     text-align: center;
     padding: 5rem 0;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    .social-buttons {
+        i {
+            color: white;
+        }
+    }
+    a{
+        color: cadetblue;
+    }
 }
 
 #credits {
     font-size: small;
 }
 
-@media screen and (min-width: 1000px){
+#name {
+    font-weight: 100;
+    //visibility: hidden;
+    //--animate-duration: 2s;
+}
+
+hr {
+    border-style: dotted;
+    margin: 0 15rem;
+}
+
+.sect-title {
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 1220px){
     #projects-container{
         grid-template-columns: auto auto;
+        margin: 0rem 5rem;
     }
     #home {
+        min-height: 100vh;
+        padding: 5rem 5rem;
+    }
+    #home-grid {
+        display: grid;
         grid-template-columns: auto auto;
-        padding: 7.5rem 2.5rem;
         column-gap: 2.5rem;
-        #intro-text{
-            max-width: 40vw;
+        margin-bottom: 2.5rem;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
+            text-align: center;
+
+            .social-buttons {
+                flex-direction: row;
+            }
         }
+    }
+    #intro-text {
+        margin: 0 10rem 5rem;
     }
 }
 
@@ -345,6 +383,13 @@ footer {
 }
 
 @media screen and (max-width: 768px){
+    #name {
+        font-size: x-large;
+    }
+    #home-grid {
+        display: flex;
+        flex-direction: column-reverse;
+    }
     #skill-container, #interest-container{
         grid-template-columns: auto;
         row-gap: 1rem;
@@ -356,8 +401,12 @@ footer {
         padding-bottom: 1.25rem;
     }
     .new-sect-1 {
-        padding: 5rem 1rem;
+        padding: 2.5rem 1rem;
         box-sizing: border-box;
+    }
+    .sect-title {
+        padding-bottom: 2.5rem;
+        margin: 0;
     }
     hr {
         margin: 0 5rem;
@@ -368,8 +417,8 @@ footer {
     .project-links i {
         font-size: 1.5rem;
     }
-    .project-info {
-        padding: 1rem;
+    .project-info, .project-title {
+        padding: 0.5rem;
     }
     #headshot {
         width: 50vw;
@@ -379,6 +428,7 @@ footer {
         justify-content: center;
         align-content: space-between;
         i {
+            font-size: 2rem;
             width: 3.5rem;
         }
     }
