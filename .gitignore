@@ -1,1 +1,4 @@
 debug.log
+node_modules
+.cache
+public
