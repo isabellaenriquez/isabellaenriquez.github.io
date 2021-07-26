@@ -1,28 +1,36 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import Temporary from "./Temporary";
+import React from 'react';
+import App from '../components/App/App';
+import { ThemeProvider } from 'styled-components';
+import { useDarkMode } from '../styles/useDarkmode';
+import { lightTheme, darkTheme } from '../styles/theme';
+import { GlobalStyles } from '../styles/global';
 
 export default function Index() {
-  const data = useStaticQuery(graphql`
-    query IndexQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-      image: file(base: { eq: "monogram_dark.png" }) {
-        publicURL
-      }
-    }
-  `);
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
-  const { title, description } = data.site.siteMetadata;
+  const Toggler = () => (
+    <input
+      type='checkbox'
+      name='theme'
+      id='theme'
+      onChange={toggleTheme}
+      checked={theme === 'dark' ? true : false}
+    />
+  );
+
+  if (!componentMounted) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div>
-      <h1>{title}</h1> <p>{description}</p>
-      <img alt="Monogram logo saying iPe" src={data.image.publicURL}></img>
-      <Temporary />
-    </div>
+    <ThemeProvider theme={themeMode}>
+      <>
+        <GlobalStyles />
+        <App>
+          <Toggler />
+        </App>
+      </>
+    </ThemeProvider>
   );
 }
