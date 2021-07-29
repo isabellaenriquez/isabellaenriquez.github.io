@@ -6,6 +6,9 @@ export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
 
+    this.isOpen = false;
+    this.menu = React.createRef();
+
     this.headers = [
       {
         name: 'Home',
@@ -62,18 +65,33 @@ export default class NavBar extends React.Component {
     });
   }
 
-  generateSocialIcons(iconSrc) {
+  generateSocialIcons(iconData) {
+    console.log('generating icons');
     return this.socialIcons.map((icon) => {
       return (
         <a key={icon.name + '-icon'} className='nav-icon' href={icon.url}>
-          <img
-            src={iconSrc[icon.name].publicURL}
-            alt={icon.name}
-            title={icon.name}
-          />
+          <div
+            style={{
+              maskImage: 'url(' + iconData[icon.name].publicURL + ')',
+              WebkitMaskImage:
+                'url(' + iconData[icon.name].publicURL + '#' + icon.name + ')',
+              width: 'auto',
+              height: '100%',
+              maskRepeat: 'no-repeat',
+              WebkitMaskRepeat: 'no-repeat',
+              maskPosition: 'center',
+              WebkitMaskPosition: 'center',
+            }}
+          ></div>
         </a>
       );
     });
+  }
+
+  handleBurgerClick() {
+    const menu = this.menu.current;
+
+    menu.classList.toggle('is-open');
   }
 
   render() {
@@ -96,8 +114,14 @@ export default class NavBar extends React.Component {
           }
         `}
         render={(data) => (
-          <nav className='nav-bar block'>
-            <span className='headers'>{this.generateHeaders()}</span>
+          <nav className='nav-bar block' ref={this.menu}>
+            <button id='burger' onClick={() => this.handleBurgerClick()}>
+              🍔
+            </button>
+            <span id='headers'>
+              <hr />
+              {this.generateHeaders()}
+            </span>
             <span className='social-icons'>
               <label className='toggle'>
                 {this.props.children}

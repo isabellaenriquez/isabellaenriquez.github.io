@@ -1,9 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-*,
-  *::after,
-  *::before {
+  *,*::after,*::before {
     box-sizing: border-box;
   }
 
@@ -19,12 +17,33 @@ export const GlobalStyles = createGlobalStyle`
     -o-transition: all 0.25s linear;
   }
 
-  .headers {
-    a {
+  
+  button#burger {
+    background: ${({ theme }) => theme.blocks};
+  }
+  
+  #headers {
+    & > a {
       color: ${({theme}) => theme.text};
+      transition: 0.25s linear;
         
       &:hover {
           color: ${({theme}) => theme.accent1};
+      }
+    }
+  }
+
+  .social-icons {
+    a {
+      div {
+        background-color: ${({theme}) => theme.text};
+        transition: 0.25s linear;
+      }
+
+      &:hover {
+        div {
+          background-color: ${({theme}) => theme.accent1};
+        }
       }
     }
   }
