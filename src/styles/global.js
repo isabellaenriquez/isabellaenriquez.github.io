@@ -5,6 +5,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
@@ -15,6 +19,16 @@ export const GlobalStyles = createGlobalStyle`
     -moz-transition: all 0.25s linear;
     -ms-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
+  }
+
+  section {
+    h1 {
+      color: ${({theme}) => theme.header}; 
+    }
+
+    p.subtext {
+      color: ${({theme}) => theme.accent2};
+    }
   }
 
   
@@ -28,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
       transition: 0.25s linear;
         
       &:hover {
-          color: ${({theme}) => theme.accent1};
+          color: ${({theme}) => theme.accent2};
       }
     }
   }
@@ -42,7 +56,7 @@ export const GlobalStyles = createGlobalStyle`
 
       &:hover {
         div {
-          background-color: ${({theme}) => theme.accent1};
+          background-color: ${({theme}) => theme.accent2};
         }
       }
     }

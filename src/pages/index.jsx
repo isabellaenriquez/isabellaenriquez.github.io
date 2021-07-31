@@ -16,6 +16,7 @@ export default function Index() {
       id='theme'
       onChange={toggleTheme}
       checked={theme === 'dark' ? true : false}
+      aria-label='theme toggle'
     />
   );
 

@@ -69,7 +69,12 @@ export default class NavBar extends React.Component {
     console.log('generating icons');
     return this.socialIcons.map((icon) => {
       return (
-        <a key={icon.name + '-icon'} className='nav-icon' href={icon.url}>
+        <a
+          key={icon.name + '-icon'}
+          className='nav-icon'
+          href={icon.url}
+          aria-label={`Isabella Enriquez's ${icon.name}`}
+        >
           <div
             style={{
               maskImage: 'url(' + iconData[icon.name].publicURL + ')',
@@ -114,8 +119,12 @@ export default class NavBar extends React.Component {
           }
         `}
         render={(data) => (
-          <nav className='nav-bar block' ref={this.menu}>
-            <button id='burger' onClick={() => this.handleBurgerClick()}>
+          <nav className='nav-bar block' ref={this.menu} aria-label='menu'>
+            <button
+              id='burger'
+              onClick={() => this.handleBurgerClick()}
+              aria-label='open/close menu'
+            >
               🍔
             </button>
             <span id='headers'>
