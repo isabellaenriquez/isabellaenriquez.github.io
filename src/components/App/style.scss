@@ -1,6 +1,7 @@
 $spacing-small: 0.5rem;
 $spacing-medium: 1.5rem;
 $spacing-large: 3rem;
+$spacing-xlarge: 6rem;
 
 section {
   display: flex;
@@ -8,6 +9,8 @@ section {
   align-items: center;
   min-height: 100vh;
   padding: 0 $spacing-medium;
+  font-size: 16px;
+  font-size: 1rem;
 
   &#home {
     flex-direction: column-reverse;
@@ -24,6 +27,60 @@ section {
       width: 50vw;
       height: auto;
       border-radius: 50%;
+    }
+  }
+
+  &#about-me {
+    flex-direction: column;
+    margin: $spacing-large;
+    text-align: left;
+
+    & > * {
+      width: 100%;
+    }
+
+    header h1 {
+      margin: $spacing-large 0;
+    }
+
+    & > p {
+      margin: 0;
+    }
+
+    hr {
+      margin: 0 0 $spacing-large;
+    }
+
+    .block-grid {
+      padding: $spacing-large 0;
+    }
+  }
+
+  .block-grid {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    column-gap: $spacing-small;
+    row-gap: $spacing-large;
+
+    .rounded-block {
+      border-radius: 10px;
+      box-shadow: (0 4px 4px rgba(0, 0, 0, 0.25));
+      width: 100%;
+      padding: $spacing-large;
+      text-align: center;
+
+      h3 {
+        margin: 0;
+      }
+
+      .subsection {
+        span {
+          display: block;
+          font-weight: bold;
+          margin: $spacing-medium;
+        }
+      }
     }
   }
 
@@ -44,8 +101,6 @@ section {
   }
 
   p {
-    font-size: 16px;
-    font-size: 1rem;
     margin: $spacing-small 0;
 
     &.subtext {
@@ -57,9 +112,14 @@ section {
   }
 }
 
-@media (min-width: 43em) {
+@media (min-width: 48em) {
   section {
     margin-left: 0;
+
+    .block-grid {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $spacing-medium;
+    }
 
     &#home {
       flex-direction: row;
@@ -73,6 +133,16 @@ section {
         height: 40vh;
         width: auto;
       }
+    }
+  }
+}
+
+@media (min-width: 63em) {
+  section {
+    padding: 0 $spacing-xlarge;
+
+    .block-grid {
+      column-gap: $spacing-large;
     }
   }
 }

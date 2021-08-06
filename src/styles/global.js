@@ -29,8 +29,24 @@ export const GlobalStyles = createGlobalStyle`
     p.subtext {
       color: ${({theme}) => theme.accent2};
     }
+
+    .block-grid {
+      .rounded-block {
+        span {
+          color: ${({theme}) => theme.accent1}
+        }
+      }
+    }
   }
 
+
+  a {
+    color: ${({theme}) => theme.accent1};
+
+    &:visited {
+      color: ${({theme}) => theme.accent2};
+    }
+  }
   
   button#burger {
     background: ${({ theme }) => theme.blocks};
