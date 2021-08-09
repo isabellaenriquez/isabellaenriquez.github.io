@@ -1,14 +1,11 @@
-$spacing-small: 0.5rem;
-$spacing-medium: 1.5rem;
-$spacing-large: 3rem;
-$spacing-xlarge: 6rem;
+@import '../../styles/variables.scss';
 
 section {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 0 $spacing-medium;
+  padding: $spacing-medium;
   font-size: 16px;
   font-size: 1rem;
 
@@ -30,9 +27,10 @@ section {
     }
   }
 
-  &#about-me {
+  &#about-me,
+  &#work,
+  &#projects {
     flex-direction: column;
-    margin: $spacing-large;
     text-align: left;
 
     & > * {
@@ -70,7 +68,7 @@ section {
       padding: $spacing-large;
       text-align: center;
 
-      h3 {
+      h2 {
         margin: 0;
       }
 
@@ -112,7 +110,7 @@ section {
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: #{$fit-two-col}) {
   section {
     margin-left: 0;
 
@@ -134,12 +132,13 @@ section {
         width: auto;
       }
     }
+    padding: $spacing-large;
   }
 }
 
-@media (min-width: 63em) {
+@media (min-width: #{$desktop}) {
   section {
-    padding: 0 $spacing-xlarge;
+    padding: $spacing-xlarge;
 
     .block-grid {
       column-gap: $spacing-large;

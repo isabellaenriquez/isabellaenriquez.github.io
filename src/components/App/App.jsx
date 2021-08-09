@@ -1,14 +1,54 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
+import ExpBlock from '../ExpBlock/ExpBlock';
 import { StaticQuery, graphql } from 'gatsby';
 import './style.scss';
+
+const workData = require('../../data/work.json');
+const projectsData = require('../../data/projects.json');
+console.log({ workData });
 export default class App extends React.Component {
+  getWorkBlocks() {
+    return workData.map((node) => {
+      return (
+        <ExpBlock
+          key={node.company}
+          title={`${node.position} @ ${node.company}`}
+          timespan={node.timespan}
+          summary={node.summary}
+          stack={node.stack}
+          links={node.links}
+          imgName={node.imgName}
+        />
+      );
+    });
+  }
+
+  getProjectBlocks() {
+    return projectsData.map((node) => {
+      return (
+        <ExpBlock
+          key={node.title}
+          title={node.title}
+          timespan={node.timespan}
+          summary={node.summary}
+          stack={node.stack}
+          links={node.links}
+          imgName={node.imgName}
+        />
+      );
+    });
+  }
+
   render() {
     return (
       <StaticQuery
         query={graphql`
           query AppQuery {
             me: file(base: { eq: "profile-pic.jpeg" }) {
+              publicURL
+            }
+            blob: file(base: { eq: "blob.svg" }) {
               publicURL
             }
           }
@@ -30,7 +70,7 @@ export default class App extends React.Component {
               </header>
               <img
                 src={data.me.publicURL}
-                alt='A picture of Isabella Enriquez'
+                alt='Isabella Enriquez'
                 id='profile-pic'
               ></img>
             </section>
@@ -44,30 +84,30 @@ export default class App extends React.Component {
                 description of the "Computer Studies" course. I think it worked
                 out though.
               </p>
-              <div class='block-grid'>
-                <div class='block rounded-block'>
-                  <h3>&#129302; Tech Stack</h3>
-                  <div class='subsection'>
+              <div className='block-grid'>
+                <div className='block rounded-block'>
+                  <h2>&#129302; Tech Stack</h2>
+                  <div className='subsection'>
                     <span>Languages:</span>Python, JavaScript, TypeScript, HTML,
                     CSS, Sass, Java, C#, C, SQL
                   </div>
-                  <div class='subsection'>
+                  <div className='subsection'>
                     <span>Frameworks:</span>
                     Flask, Django, React, Svelte, Cypress, JUnit, Gatsby
                   </div>
-                  <div class='subsection'>
+                  <div className='subsection'>
                     <span>Other tools and skills:</span>
                     Git/GitHub, Unity, Linux, Figma, REST, CI/CD
                   </div>
                 </div>
-                <div class='block rounded-block'>
-                  <h3>&#10084; Things I Enjoy</h3>
-                  <div class='subsection'>
+                <div className='block rounded-block'>
+                  <h2>&#10084; Things I Enjoy</h2>
+                  <div className='subsection'>
                     <span>Professional Interests:</span>
                     All Things Web (dev/design/a11y), Full Stack Development,
                     Tech for Social Impact
                   </div>
-                  <div class='subsection'>
+                  <div className='subsection'>
                     <span>Personal Interests:</span>
                     Cultural Geography, Fashion, History, Movies, Travel, Video
                     Games, World Building, Writing
@@ -93,6 +133,24 @@ export default class App extends React.Component {
                 of my interests, my writing, or even just how you’re doing. I’m
                 here to listen.
               </p>
+            </section>
+            <section
+              id='work'
+              aria-label='Work'
+              ref={(section) => (this.workSection = section)}
+            >
+              <header>
+                <h1>Work</h1>
+              </header>
+              <p>&#128640; My professional adventures thus far.</p>
+              <div className='block-grid'>{this.getWorkBlocks()}</div>
+            </section>
+            <section id='projects' aria-label='Projects'>
+              <header>
+                <h1>Projects</h1>
+              </header>
+              <p>&#128296; Innovating with code and design.</p>
+              <div className='block-grid'>{this.getProjectBlocks()}</div>
             </section>
           </>
         )}

@@ -66,7 +66,6 @@ export default class NavBar extends React.Component {
   }
 
   generateSocialIcons(iconData) {
-    console.log('generating icons');
     return this.socialIcons.map((icon) => {
       return (
         <a
@@ -74,6 +73,7 @@ export default class NavBar extends React.Component {
           className='nav-icon'
           href={icon.url}
           aria-label={`Isabella Enriquez's ${icon.name}`}
+          title={icon.name}
         >
           <div
             style={{
