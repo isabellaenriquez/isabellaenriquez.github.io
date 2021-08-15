@@ -33,12 +33,15 @@ export const GlobalStyles = createGlobalStyle`
     .block-grid {
       .rounded-block {
         span {
-          color: ${({theme}) => theme.accent1}
+          color: ${({theme}) => theme.accent1};
         }
       }
     }
   }
 
+  .blob-message {
+    background: ${({theme}) => theme.accent1};
+  }
 
   a {
     color: ${({theme}) => theme.accent1};

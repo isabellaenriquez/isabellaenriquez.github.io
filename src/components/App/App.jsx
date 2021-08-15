@@ -3,10 +3,10 @@ import NavBar from '../NavBar/NavBar';
 import ExpBlock from '../ExpBlock/ExpBlock';
 import { StaticQuery, graphql } from 'gatsby';
 import './style.scss';
+import Blob from '../../images/blob.svg';
 
 const workData = require('../../data/work.json');
 const projectsData = require('../../data/projects.json');
-console.log({ workData });
 export default class App extends React.Component {
   getWorkBlocks() {
     return workData.map((node) => {
@@ -40,6 +40,53 @@ export default class App extends React.Component {
     });
   }
 
+  componentDidMount() {
+    const blobSections = [
+      {
+        section: document.getElementById('about-me'),
+        show: false,
+        msg: 'Isabella is currently working on a blog, stay tuned!',
+      },
+      {
+        section: document.getElementById('work'),
+        show: false,
+        msg: 'Isabella is currently seeking out Summer 2022 SWE Internships!',
+      },
+    ];
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (this.blob && this.blobMsg) {
+          let showBlob = false;
+          blobSections.forEach((sec) => {
+            sec.show = this.showSectionBlob(sec.section);
+            if (sec.show) {
+              if (!showBlob) showBlob = true;
+              if (this.blobMsg.innerHTML !== sec.msg)
+                this.blobMsg.innerHTML = sec.msg;
+            }
+          });
+          if (showBlob && !this.blob.classList.contains('visible-blob')) {
+            this.blob.classList.add('visible-blob');
+          } else if (
+            !showBlob &&
+            this.blob.classList.contains('visible-blob')
+          ) {
+            this.blob.classList.remove('visible-blob');
+          }
+        }
+      },
+      true
+    );
+  }
+
+  showSectionBlob(section) {
+    const top = section.getBoundingClientRect().top;
+    const height = section.clientHeight;
+    // console.log({ top, height });
+    return top >= -1 * (height / 2) && top <= 0;
+  }
+
   render() {
     return (
       <StaticQuery
@@ -54,7 +101,7 @@ export default class App extends React.Component {
           }
         `}
         render={(data) => (
-          <>
+          <main>
             <NavBar>{this.props.children}</NavBar>
             <section aria-label='Home' id='home'>
               <header>
@@ -152,7 +199,15 @@ export default class App extends React.Component {
               <p>&#128296; Innovating with code and design.</p>
               <div className='block-grid'>{this.getProjectBlocks()}</div>
             </section>
-          </>
+
+            <div className='blob-friend' ref={(blob) => (this.blob = blob)}>
+              <Blob />
+              <span
+                className='blob-message'
+                ref={(span) => (this.blobMsg = span)}
+              />
+            </div>
+          </main>
         )}
       />
     );
