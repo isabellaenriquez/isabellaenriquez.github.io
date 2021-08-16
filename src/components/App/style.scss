@@ -75,7 +75,6 @@ section {
       .subsection {
         span {
           display: block;
-          font-weight: bold;
           margin: $spacing-medium;
         }
       }
@@ -113,8 +112,6 @@ section {
 .blob-friend {
   width: 80vw;
   height: auto;
-  transition: transform 0.3s ease-in-out;
-  transform: translateY(101%);
   position: fixed;
   left: 10vw;
   bottom: 0;
@@ -122,8 +119,13 @@ section {
   grid-template-columns: $spacing-xlarge auto;
   column-gap: $spacing-small;
 
-  &.visible-blob {
-    transform: translateY(0%);
+  &#popup-blob {
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(101%);
+
+    &.visible-blob {
+      transform: translateY(0%);
+    }
   }
 
   .blob-message {
@@ -134,6 +136,22 @@ section {
     margin-bottom: $spacing-small;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
   }
+}
+
+main {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+  text-align: center;
+  padding: $spacing-xlarge $spacing-medium;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 @media (min-width: #{$fit-two-col}) {
@@ -164,7 +182,7 @@ section {
 
 @media (min-width: #{$desktop}) {
   section {
-    padding: $spacing-xlarge;
+    padding: $spacing-xlarge $spacing-xxlarge;
 
     .block-grid {
       column-gap: $spacing-large;

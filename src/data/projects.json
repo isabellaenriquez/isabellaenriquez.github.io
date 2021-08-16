@@ -15,7 +15,7 @@
             },
             {
                 "name": "Misc",
-                "url": ""
+                "url": "https://creative.caslab.queensu.ca/~pandemic-protection/Pandemic%20Protection%20Game/"
             }
         ],
         "imgName": "pandemicProtection"
@@ -57,12 +57,12 @@
     {
         "title": "Journey",
         "timespan": "November 2020",
-        "summary": "A mental health and wellness journaling tool. Award \"Most Innovative Project\" at hackHer 2020.",
+        "summary": "A mental health and wellness journaling tool. Awarded \"Most Innovative Project\" at hackHer 2020.",
         "stack": "React, Express, Firebase, Google Natural Language API",
         "links": [
             {
                 "name": "GitHub",
-                "url": "https://github.com/mkevinq/isabellaenriquez"
+                "url": "https://github.com/isabellaenriquez/journey"
             }
         ],
         "imgName": "journey"

@@ -30,9 +30,10 @@
       margin: 0;
     }
 
-    .social-icons {
+    .social-icons.projects {
       margin-top: $spacing-medium;
       display: flex;
+      justify-content: flex-start;
       column-gap: $spacing-small;
 
       div {

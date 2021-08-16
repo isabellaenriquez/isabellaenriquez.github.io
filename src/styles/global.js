@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
+    font-weight: ${({theme}) => theme.textWeight};
     margin: 0;
     font-family: Calibri;
     transition: all 0.25s linear;
@@ -19,6 +20,14 @@ export const GlobalStyles = createGlobalStyle`
     -moz-transition: all 0.25s linear;
     -ms-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
+  }
+
+  main {
+    background: ${({ theme }) => theme.background};
+  }
+
+  .bold, .subsection span, a {
+    font-weight: ${({theme}) => theme.bold};
   }
 
   section {
@@ -39,15 +48,22 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  .blob-message {
-    background: ${({theme}) => theme.accent1};
+  .blob-friend {
+    svg {
+      path{
+        fill: ${({theme}) => theme.blob};
+      }
+    }
+    .blob-message {
+      background: ${({theme}) => theme.accent1};
+    }
   }
 
   a {
-    color: ${({theme}) => theme.accent1};
+    color: ${({theme}) => theme.accent2};
 
     &:visited {
-      color: ${({theme}) => theme.accent2};
+      color: ${({theme}) => theme.accent1};
     }
   }
   
@@ -76,6 +92,15 @@ export const GlobalStyles = createGlobalStyle`
       &:hover {
         div {
           background-color: ${({theme}) => theme.accent2};
+        }
+      }
+    }
+
+    .toggler {
+      label {
+        background-color: ${({theme}) => theme.text};
+        .ball {
+          background-color: ${({theme}) => theme.blocks};
         }
       }
     }

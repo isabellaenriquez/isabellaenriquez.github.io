@@ -61,16 +61,8 @@
   }
 
   .social-icons {
-    display: grid;
-    column-gap: $spacing-small;
-    grid-template-columns: repeat(5, 1fr);
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
-
-    div {
-      min-width: 2rem;
-      min-height: 2rem;
-    }
   }
 }
 

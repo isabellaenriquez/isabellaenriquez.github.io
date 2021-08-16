@@ -98,7 +98,9 @@ export default class ExpBlock extends React.Component {
               <p className='timespan accent1-text'>{this.timespan}</p>
               <p>{this.summary}</p>
               <p className='stack'>Stack: {this.stack}</p>
-              <div className='social-icons'>{this.generateLinkIcons(data)}</div>
+              <div className='social-icons projects'>
+                {this.generateLinkIcons(data)}
+              </div>
             </div>
           </div>
         )}

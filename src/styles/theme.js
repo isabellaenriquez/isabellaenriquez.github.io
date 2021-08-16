@@ -7,15 +7,19 @@ export const lightTheme = {
   blocks: '#F3F3F3',
   blob: '#FFC700',
   sun: '#FFEC40',
+  textWeight: '400',
+  bold: '600',
 };
 
 export const darkTheme = {
    background: '#2c2c2c',
    text: '#e0e0e0',
    header: '#5C8897',
-   accent1: '#3390a0',
+   accent1: '#1B7D8E',
    accent2: '#5c8897',
    blocks: '#121212',
-   blob: '#ff4d8b',
-   moon: '#f49bba' 
+   blob: '#F49BBA',
+   moon: '#f49bba' ,
+   textWeight:'350',
+   bold: '550',
 }
