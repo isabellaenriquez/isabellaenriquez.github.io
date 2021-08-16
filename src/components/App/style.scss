@@ -111,13 +111,13 @@ section {
 
 .blob-friend {
   width: 80vw;
-  height: auto;
   position: fixed;
   left: 10vw;
   bottom: 0;
   display: grid;
   grid-template-columns: $spacing-xlarge auto;
   column-gap: $spacing-small;
+  align-items: flex-end;
 
   &#popup-blob {
     transition: transform 0.5s ease-in-out;
@@ -131,9 +131,9 @@ section {
   .blob-message {
     width: fit-content;
     height: fit-content;
+    margin-bottom: $spacing-medium;
     padding: $spacing-small;
     border-radius: 1rem;
-    margin-bottom: $spacing-small;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
   }
 }

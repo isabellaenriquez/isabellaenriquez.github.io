@@ -195,7 +195,6 @@ export default class App extends React.Component {
                 <p>&#128296; Innovating with code and design.</p>
                 <div className='block-grid'>{this.getProjectBlocks()}</div>
               </section>
-
               <div
                 id='popup-blob'
                 className='blob-friend'

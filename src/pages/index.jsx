@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from '../styles/theme';
 import { GlobalStyles } from '../styles/global';
 import Sun from '../images/sunFriend.svg';
 import Moon from '../images/moonFriend.svg';
+import { Helmet } from 'react-helmet';
 
 export default function Index() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
@@ -29,13 +30,37 @@ export default function Index() {
     </div>
   );
 
+  const title = 'Isabella Enriquez || Full Stack Dev and CS Student';
+  const description =
+    'I like making pretty, functional things everyone can enjoy.';
+
   if (!componentMounted) {
-    return <div>Loading...</div>;
+    return (
+      <ThemeProvider theme={themeMode}>
+        <main
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+          }}
+        >
+          Loading...
+        </main>
+      </ThemeProvider>
+    );
   }
 
   return (
     <ThemeProvider theme={themeMode}>
       <>
+        <Helmet>
+          <title>{title}</title>
+          <meta name='description' content={description} />
+          <meta property='og:title' content={title} />
+          <meta property='og:description' content={description} />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+        </Helmet>
         <GlobalStyles />
         <App>
           <Toggler />

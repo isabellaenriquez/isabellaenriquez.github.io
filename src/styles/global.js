@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     font-weight: ${({theme}) => theme.textWeight};
     margin: 0;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     transition: all 0.25s linear;
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
