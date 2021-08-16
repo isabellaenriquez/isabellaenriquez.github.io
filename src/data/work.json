@@ -1,0 +1,18 @@
+[
+    {
+        "company": "Nylas",
+        "position": "Frontend Dev",
+        "timespan": "May to August 2021",
+        "summary": "Empowered developers with powerful APIs and beautiful web components that seamlessly integrated into existing applications.\n\nFirst and only intern on the Developer Experience Team ❤",
+        "stack": "Svelte, JavaScript, TypeScript, Cypress",
+        "imgName": "nylas"
+    }, 
+    {
+        "company": "Queen's University",
+        "position": "Teaching Assistant",
+        "timespan": "January to April 2021",
+        "summary": "Educated, encouraged, and evaluated beginner programmers and computer science students at the university level.",
+        "stack": "Python",
+        "imgName": "qsc"
+    }
+]

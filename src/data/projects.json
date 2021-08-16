@@ -1,0 +1,100 @@
+[
+    {
+        "title": "Pandemic Protection",
+        "timespan": "January to April 2021",
+        "summary": "A 2D platformer that educates young Canadians on COVID-19 safety guidelines.",
+        "stack": "Unity, C#",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": ""
+            },
+            {
+                "name": "Youtube",
+                "url": "https://www.youtube.com/watch?v=08aMdLG3SLI"
+            },
+            {
+                "name": "Misc",
+                "url": "https://creative.caslab.queensu.ca/~pandemic-protection/Pandemic%20Protection%20Game/"
+            }
+        ],
+        "imgName": "pandemicProtection"
+    },
+    {
+        "title": "studybuddy",
+        "timespan": "January 2021",
+        "summary": "The remote student's best friend.",
+        "stack": "React, CSS, TensorFlow",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/mkevinq/studybuddy"
+            },
+            {
+                "name": "Youtube",
+                "url": "https://www.youtube.com/watch?v=lE0MNbCttMY&list=PLH2wYuURvrWS-dMX1bjbcE4xq0kCGRQqR&ab_channel=KevinQuijalvo"
+            }
+        ],
+        "imgName": "studybuddy"
+    },
+    {
+        "title": "leya.",
+        "timespan": "January 2021",
+        "summary": "A Chrome extension for visual and audial immersion.",
+        "stack": "JavaScript, HTML, CSS, Google Chrome Extension API",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/isabellaenriquez/leya"
+            }, 
+            {
+                "name": "Youtube",
+                "url":"https://www.youtube.com/watch?v=mJd_DdHNVGo"
+            }
+        ],
+        "imgName": "leya"
+    },
+    {
+        "title": "Journey",
+        "timespan": "November 2020",
+        "summary": "A mental health and wellness journaling tool. Awarded \"Most Innovative Project\" at hackHer 2020.",
+        "stack": "React, Express, Firebase, Google Natural Language API",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/isabellaenriquez/journey"
+            }
+        ],
+        "imgName": "journey"
+    },
+    {
+        "title": "KOSMOS -- your virtual makeup bag",
+        "timespan":  "August 2020",
+        "summary": "Making the makeup community and experience simple and transparent.",
+        "stack": "Python, Django, JavaScript, HTML, Sass, Celery, RabbitMQ",
+        "links": [
+            {
+                "name": "GitHub",
+                "url":"https://github.com/isabellaenriquez/kosmos"
+            }
+        ],
+        "imgName": "kosmos"
+    },
+    {
+        "title": "Bookworm Wannabe",
+        "timespan": "July 2020",
+        "summary": "A simple book review website with user authentication and a database of 5000+ books.",
+        "stack": "Python, Flask, SQLAlchemy, PostgreSQL, HTML, CSS, Goodreads API (now deprecated)",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/isabellaenriquez/bookworm-wannabe"
+            },
+            {
+                "name": "Youtube",
+                "url":"https://www.youtube.com/watch?v=XaUTkiJLEHQ&list=PLH2wYuURvrWQskB8BvBHlLlFj8IeHopvF&index=2"
+            }
+        ],
+        "imgName": "bookworm-wannabe"
+    }
+]
