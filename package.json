@@ -5,7 +5,8 @@
   "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx npm-force-resolutions",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
@@ -36,5 +37,8 @@
     "browserslist": "^4.16.5",
     "trim": "^0.0.3",
     "sanitize-html": "^2.3.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
