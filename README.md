@@ -1,6 +1,6 @@
 # Hi, my name is Isabella!
 
-This repo contains the source code for my website. Go to <a href="https://isabellaenriquez.github.io">isabellaenriquez.github.io</a> to check it out!
+This repo contains the source code for my website. Go to <a href="https://www.isabellaenriquez.tech">www.isabellaenriquez.tech</a> to check it out!
 
 # Credits
 
