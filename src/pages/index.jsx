@@ -7,9 +7,10 @@ import { GlobalStyles } from '../styles/global';
 import Sun from '../images/sunFriend.svg';
 import Moon from '../images/moonFriend.svg';
 import { Helmet } from 'react-helmet';
+import Loader from '../components/Loader/Loader';
 
 export default function Index() {
-  const [theme, toggleTheme, componentMounted] = useDarkMode();
+  const [theme, toggleTheme, themeLoaded] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   const Toggler = () => (
@@ -25,7 +26,7 @@ export default function Index() {
       <label htmlFor='theme'>
         <Moon />
         <Sun />
-        <span className='ball' />
+        <span className='ball' aria-label='theme toggler' />
       </label>
     </div>
   );
@@ -34,19 +35,19 @@ export default function Index() {
   const description =
     'I like making pretty, functional things everyone can enjoy.';
 
-  if (!componentMounted) {
+  if (!themeLoaded) {
     return (
-      <ThemeProvider theme={themeMode}>
-        <main
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            textAlign: 'center',
-          }}
-        >
-          Loading...
-        </main>
+      <ThemeProvider theme={darkTheme}>
+        <>
+          <Helmet>
+            <script
+              src='https://kit.fontawesome.com/740a5138ca.js'
+              crossorigin='anonymous'
+            ></script>
+          </Helmet>
+          <GlobalStyles />
+          <Loader />
+        </>
       </ThemeProvider>
     );
   }
@@ -59,7 +60,16 @@ export default function Index() {
           <meta name='description' content={description} />
           <meta property='og:title' content={title} />
           <meta property='og:description' content={description} />
+          <meta property='og:type' content='website' />
+          <meta
+            property='og:image'
+            content='https://avatars.githubusercontent.com/u/45607721?v=4'
+          />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <script
+            src='https://kit.fontawesome.com/740a5138ca.js'
+            crossorigin='anonymous'
+          ></script>
         </Helmet>
         <GlobalStyles />
         <App>

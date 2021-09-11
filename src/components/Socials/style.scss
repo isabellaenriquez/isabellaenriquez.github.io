@@ -37,13 +37,15 @@
           position: relative;
 
           .ball {
+            display: inline-block;
             width: 1.5rem;
             height: 1.5rem;
             position: absolute;
             left: 0.25rem;
             border-radius: 50%;
-            transform: translateX(0rem);
             transition: transform 0.5s linear;
+            transform: translateX(0rem);
+            cursor: pointer;
           }
 
           svg {
