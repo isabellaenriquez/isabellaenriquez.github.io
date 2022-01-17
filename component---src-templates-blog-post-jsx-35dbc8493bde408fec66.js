@@ -1,2 +1,0 @@
-(self.webpackChunkisabellaenriquez_github_io=self.webpackChunkisabellaenriquez_github_io||[]).push([[390],{111:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return a}});var l=n(7294);function a(e){var t=e.data.markdownRemark;return l.createElement("div",null,l.createElement("h1",null,t.frontmatter.title),l.createElement("small",null,t.frontmatter.date),l.createElement("div",{dangerouslySetInnerHTML:{__html:t.html}}))}}}]);
-//# sourceMappingURL=component---src-templates-blog-post-jsx-35dbc8493bde408fec66.js.map
