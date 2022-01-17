@@ -51,7 +51,7 @@ export default function Index() {
           <meta property='og:type' content='website' />
           <meta
             property='og:image'
-            content={`https://www.isabellaenriquez.github.io${OgImage}`}
+            content={`https://isabellaenriquez.github.io${OgImage}`}
           />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <script
