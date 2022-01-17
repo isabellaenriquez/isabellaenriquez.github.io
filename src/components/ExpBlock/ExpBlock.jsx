@@ -95,7 +95,7 @@ export default class ExpBlock extends React.Component {
             <img src={this.getExpImage(data.allFile.edges)} alt={this.title} />
             <div className='info'>
               <h2>{this.title}</h2>
-              <p className='timespan accent1-text'>{this.timespan}</p>
+              <p className='timespan'>{this.timespan}</p>
               <p>{this.summary}</p>
               <p className='stack'>Stack: {this.stack}</p>
               <div className='social-icons projects'>

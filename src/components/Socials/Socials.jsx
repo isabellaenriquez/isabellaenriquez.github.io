@@ -1,6 +1,5 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import resume from '../../../static/Isabella_Enriquez_Resume.pdf';
 import './style.scss';
 
 export default class Socials extends React.Component {
@@ -8,10 +7,6 @@ export default class Socials extends React.Component {
     super(props);
 
     this.socialIcons = [
-      {
-        name: 'Resume',
-        url: resume,
-      },
       {
         name: 'Email',
         url: 'mailto:isabella.enriquez@queensu.ca',
@@ -61,9 +56,6 @@ export default class Socials extends React.Component {
         query={graphql`
           query SocialsQuery {
             GitHub: file(base: { eq: "GitHub.svg" }) {
-              publicURL
-            }
-            Resume: file(base: { eq: "Resume.svg" }) {
               publicURL
             }
             Linkedin: file(base: { eq: "Linkedin.svg" }) {

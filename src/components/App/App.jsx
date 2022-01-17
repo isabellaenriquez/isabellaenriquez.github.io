@@ -46,12 +46,12 @@ export default class App extends React.Component {
       {
         section: document.getElementById('about-me'),
         show: false,
-        msg: 'Isabella is currently working on a blog, stay tuned!',
+        msg: 'Isabella is hoping to start a blog soon, so stay tuned!',
       },
       {
         section: document.getElementById('work'),
         show: false,
-        msg: 'Isabella is currently seeking out Summer 2022 SWE Internships!',
+        msg: "Next summer, Isabella will be working at Linkedin's head office as an UI Engineer Intern!",
       },
     ];
     window.addEventListener(
@@ -80,7 +80,6 @@ export default class App extends React.Component {
       true
     );
   }
-
   showSectionBlob(section) {
     const top = section.getBoundingClientRect().top;
     const height = section.clientHeight;
@@ -92,7 +91,10 @@ export default class App extends React.Component {
       <StaticQuery
         query={graphql`
           query AppQuery {
-            me: file(base: { eq: "profile-pic.jpeg" }) {
+            lightModeMe: file(base: { eq: "lightModeMe.jpeg" }) {
+              publicURL
+            }
+            darkModeMe: file(base: { eq: "darkModeMe.jpeg" }) {
               publicURL
             }
             blob: file(base: { eq: "blob.svg" }) {
@@ -113,7 +115,11 @@ export default class App extends React.Component {
                   </p>
                 </header>
                 <img
-                  src={data.me.publicURL}
+                  src={
+                    this.props.theme === 'dark'
+                      ? data.darkModeMe.publicURL
+                      : data.lightModeMe.publicURL
+                  }
                   alt='Isabella Enriquez'
                   id='profile-pic'
                 />
@@ -133,11 +139,12 @@ export default class App extends React.Component {
                     <h2>&#129302; Tech Stack</h2>
                     <div className='subsection'>
                       <span>Languages:</span>Python, JavaScript, TypeScript,
-                      HTML, CSS, Sass, Java, C#, C, SQL
+                      HTML, CSS, Sass, Java, C#, C, Dart, SQL
                     </div>
                     <div className='subsection'>
                       <span>Frameworks:</span>
-                      Flask, Django, React, Svelte, Cypress, JUnit, Gatsby
+                      Flask, Django, React, Svelte, Cypress, JUnit, Gatsby,
+                      Flutter, Selenium
                     </div>
                     <div className='subsection'>
                       <span>Other tools and skills:</span>
@@ -145,7 +152,7 @@ export default class App extends React.Component {
                     </div>
                   </div>
                   <div className='block rounded-block'>
-                    <h2>&#10084; Things I Enjoy</h2>
+                    <h2>&#129299; Interests</h2>
                     <div className='subsection'>
                       <span>Professional Interests:</span>
                       All Things Web (dev/design/a11y), Full Stack Development,
@@ -153,8 +160,8 @@ export default class App extends React.Component {
                     </div>
                     <div className='subsection'>
                       <span>Personal Interests:</span>
-                      Cultural Geography, Fashion, History, Movies, Travel,
-                      Video Games, World Building, Writing
+                      Cultural Geography, Fashion, History, Movies, Mythology,
+                      Travel, Video Games, Writing
                     </div>
                   </div>
                 </div>
@@ -172,9 +179,9 @@ export default class App extends React.Component {
                   <a href='mailto:isabella.enriquez@queensu.ca'>
                     isabella.enriquez@queensu.ca
                   </a>
-                  ! I’d love to chat, whether it be about opportunities, any one
-                  of my interests, my writing, or even just how you’re doing.
-                  I’m here to listen.
+                  ! I’d love to chat, whether it be about opportunities (current
+                  resume available upon request), any one of my interests, my
+                  writing, or even just how you’re doing. I’m here to listen.
                 </p>
               </section>
               <section
@@ -192,7 +199,11 @@ export default class App extends React.Component {
                 <header>
                   <h1>Projects</h1>
                 </header>
-                <p>&#128296; Innovating with code and design.</p>
+                <p>
+                  &#128296; Innovating with code and design. Check out more of
+                  my projects on my{' '}
+                  <a href='https://github.com/isabellaenriquez'>GitHub</a>!
+                </p>
                 <div className='block-grid'>{this.getProjectBlocks()}</div>
               </section>
               <div
@@ -207,7 +218,7 @@ export default class App extends React.Component {
                 />
               </div>
             </main>
-            <footer id='footer' className='block'>
+            <footer id='footer'>
               <h2>Aw, leaving already? Let's stay connected!</h2>
               <Socials />
               <div id='footer-blob' className='blob-friend'>

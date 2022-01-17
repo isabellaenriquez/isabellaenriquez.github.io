@@ -7,7 +7,7 @@ import { GlobalStyles } from '../styles/global';
 import Sun from '../images/sunFriend.svg';
 import Moon from '../images/moonFriend.svg';
 import { Helmet } from 'react-helmet';
-import Loader from '../components/Loader/Loader';
+import OgImage from '../../static/site-preview.jpg';
 
 export default function Index() {
   const [theme, toggleTheme, themeLoaded] = useDarkMode();
@@ -26,36 +26,24 @@ export default function Index() {
       <label htmlFor='theme'>
         <Moon />
         <Sun />
-        <span className='ball' aria-label='theme toggler' />
+        <span
+          className='ball'
+          aria-label='theme toggler'
+          title='Toggle theme'
+        />
       </label>
     </div>
   );
 
-  const title = 'Isabella Enriquez || Full Stack Dev and CS Student';
+  const title = 'Isabella Enriquez';
   const description =
     'I like making pretty, functional things everyone can enjoy.';
-
-  if (!themeLoaded) {
-    return (
-      <ThemeProvider theme={darkTheme}>
-        <>
-          <Helmet>
-            <script
-              src='https://kit.fontawesome.com/740a5138ca.js'
-              crossorigin='anonymous'
-            ></script>
-          </Helmet>
-          <GlobalStyles />
-          <Loader />
-        </>
-      </ThemeProvider>
-    );
-  }
 
   return (
     <ThemeProvider theme={themeMode}>
       <>
         <Helmet>
+          <meta charSet='utf-8' />
           <title>{title}</title>
           <meta name='description' content={description} />
           <meta property='og:title' content={title} />
@@ -63,7 +51,7 @@ export default function Index() {
           <meta property='og:type' content='website' />
           <meta
             property='og:image'
-            content='https://avatars.githubusercontent.com/u/45607721?v=4'
+            content={`https://www.isabellaenriquez.github.io${OgImage}`}
           />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <script
@@ -72,7 +60,7 @@ export default function Index() {
           ></script>
         </Helmet>
         <GlobalStyles />
-        <App>
+        <App theme={theme}>
           <Toggler />
         </App>
       </>

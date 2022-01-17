@@ -38,6 +38,7 @@ export default class NavBar extends React.Component {
           key={header.name + '-header'}
           className='nav-header'
           href={header.url}
+          onClick={() => this.handleBurgerClick()}
         >
           <span>{header.name}</span>
         </a>

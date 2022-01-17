@@ -12,9 +12,9 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
-    font-weight: ${({theme}) => theme.textWeight};
+    font-weight: ${({ theme }) => theme.textWeight};
     margin: 0;
-    font-family: Calibri, sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica", "Segoe UI",Roboto,"Helvetica Neue", Arial, sans-serif;
     transition: all 0.25s linear;
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
@@ -27,44 +27,29 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .bold, .subsection span, a {
-    font-weight: ${({theme}) => theme.bold};
+    font-weight: ${({ theme }) => theme.bold};
   }
 
   section {
-    h1 {
-      color: ${({theme}) => theme.header}; 
-    }
-
-    p.subtext {
-      color: ${({theme}) => theme.accent2};
-    }
-
-    .block-grid {
-      .rounded-block {
-        span {
-          color: ${({theme}) => theme.accent1};
-        }
-      }
+    h1, .block-grid .rounded-block span {
+      color: ${({ theme }) => theme.header}; 
     }
   }
 
   .blob-friend {
     svg {
       path{
-        fill: ${({theme}) => theme.blob};
+        fill: ${({ theme }) => theme.blob};
       }
     }
     .blob-message {
-      background: ${({theme}) => theme.accent1};
+      background: ${({ theme }) => theme.blocks};
+      border: 1px solid ${({ theme }) => theme.text};
     }
   }
 
   a {
-    color: ${({theme}) => theme.accent2};
-
-    &:visited {
-      color: ${({theme}) => theme.accent1};
-    }
+    color: ${({ theme }) => theme.header};
   }
   
   button#burger {
@@ -73,11 +58,11 @@ export const GlobalStyles = createGlobalStyle`
   
   #headers {
     & > a {
-      color: ${({theme}) => theme.text};
+      color: ${({ theme }) => theme.text};
       transition: 0.25s linear;
         
       &:hover {
-          color: ${({theme}) => theme.accent2};
+          color: ${({ theme }) => theme.header};
       }
     }
   }
@@ -85,42 +70,30 @@ export const GlobalStyles = createGlobalStyle`
   .social-icons {
     a {
       div {
-        background-color: ${({theme}) => theme.text};
+        background-color: ${({ theme }) => theme.text};
         transition: 0.25s linear;
       }
 
       &:hover {
         div {
-          background-color: ${({theme}) => theme.accent2};
+          background-color: ${({ theme }) => theme.header};
         }
       }
     }
 
     .toggler {
       label {
-        background-color: ${({theme}) => theme.text};
+        background-color: ${({ theme }) => theme.text};
         .ball {
-          background-color: ${({theme}) => theme.blocks};
+          background-color: ${({ theme }) => theme.blocks};
         }
       }
     }
   }
 
-  .accent1 {
-    background:  ${({ theme }) => theme.accent1};
+  .timespan, .stack {
+    color: ${({ theme }) => theme.header};
   }
-
-  .accent1-text {
-    color: ${({ theme }) => theme.accent1};
-  }
-
-  .accent2 {
-    background:  ${({ theme }) => theme.accent2};
- }
-
- .accent2-text {
-    color: ${({ theme }) => theme.accent2};
- }
 
  .block {
      background: ${({ theme }) => theme.blocks};
@@ -144,4 +117,9 @@ export const GlobalStyles = createGlobalStyle`
 .toggle-accents {
     background: ${({ theme }) => theme.blob};
 }
+
+#footer {
+  background: ${({ theme }) => theme.footer};
+}
+
 `;

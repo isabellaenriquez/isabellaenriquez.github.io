@@ -20,8 +20,7 @@ export default function ErrorPage() {
       >
         <GlobalStyles />
         <NavBar />
-        <h1>&#128148;404: Page Not Found &#128148;</h1>
-        <p>&#128517; Oops! How'd we get here? &nbsp;</p>
+        <h1>&#128148; 404: Page Not Found &#128148;</h1>
         <a href='/'>Return to safety.</a>
       </main>
     </ThemeProvider>
