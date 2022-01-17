@@ -1,18 +1,18 @@
-[
+[ 
+    {
+        "company": "Queen's University",
+        "position": "Teaching Assistant",
+        "timespan": "January to April 2021, September 2021 to April 2022",
+        "summary": "Educated and evaluated computer science students at the university level.\n\nCourses: Introduction to Computing Science I (CISC 121), Logic for Computing (CISC 204), and Game Design (CISC 226).",
+        "stack": "Python (CISC 121 and CISC 204); Unity, C# (CISC 226)",
+        "imgName": "qsc"
+    },
     {
         "company": "Nylas",
         "position": "Frontend Dev",
         "timespan": "May to August 2021",
-        "summary": "Empowered developers with powerful APIs and beautiful web components that seamlessly integrated into existing applications.\n\nFirst and only intern on the Developer Experience Team ❤",
+        "summary": "Empowered developers with powerful APIs and beautiful web components that seamlessly integrate into existing applications.\n\nFirst and only intern on the Developer Experience Team ❤",
         "stack": "Svelte, JavaScript, TypeScript, Cypress",
         "imgName": "nylas"
-    }, 
-    {
-        "company": "Queen's University",
-        "position": "Teaching Assistant",
-        "timespan": "January to April 2021",
-        "summary": "Educated, encouraged, and evaluated beginner programmers and computer science students at the university level.",
-        "stack": "Python",
-        "imgName": "qsc"
     }
 ]

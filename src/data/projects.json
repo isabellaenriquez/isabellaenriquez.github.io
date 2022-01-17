@@ -68,7 +68,7 @@
         "imgName": "journey"
     },
     {
-        "title": "KOSMOS -- your virtual makeup bag",
+        "title": "KOSMOS — your virtual makeup bag",
         "timespan":  "August 2020",
         "summary": "Making the makeup community and experience simple and transparent.",
         "stack": "Python, Django, JavaScript, HTML, Sass, Celery, RabbitMQ",
