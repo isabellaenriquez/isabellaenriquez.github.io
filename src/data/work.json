@@ -1,18 +1,26 @@
 [ 
     {
-        "company": "Queen's University",
-        "position": "Teaching Assistant",
-        "timespan": "January to April 2021, September 2021 to April 2022",
-        "summary": "Educated and evaluated computer science students at the university level.\n\nCourses: Introduction to Computing Science I (CISC 121), Logic for Computing (CISC 204), and Game Design (CISC 226).",
-        "stack": "Python (CISC 121 and CISC 204); Unity, C# (CISC 226)",
-        "imgName": "qsc"
+        "company": "LinkedIn",
+        "position": "UI Engineer Intern",
+        "timespan": "May to August 2022",
+        "summary": "Currently developing as a UI Engineer Intern with the LinkedIn Talent Solutions User Experience Team!",
+        "stack": ["TBD"],
+        "imgName": "linkedin"
     },
     {
         "company": "Nylas",
-        "position": "Frontend Dev",
+        "position": "Frontend Developer Intern",
         "timespan": "May to August 2021",
-        "summary": "Empowered developers with powerful APIs and beautiful web components that seamlessly integrate into existing applications.\n\nFirst and only intern on the Developer Experience Team ❤",
-        "stack": "Svelte, JavaScript, TypeScript, Cypress",
+        "summary": "Worked as a Frontend Developer Intern—the first intern ever on the Developer Experience Team!\n\nAs part of this team, I empowered developers with powerful APIs and beautiful web components that seamlessly integrate into existing applications.",
+        "stack": ["Svelte", "JavaScript", "TypeScript", "SCSS", "Cypress"],
         "imgName": "nylas"
+    }, 
+    {
+        "company": "Queen's School of Computing",
+        "position": "Teaching Assistant",
+        "timespan": "January to April 2021, September 2021 to April 2022",
+        "summary": "Educated and evaluated computer science students at the university level as an Undergraduate Teaching Assistant for three academic semesters.\n\nCourses: Introduction to Computing Science I (CISC 121), Logic for Computing (CISC 204), and Game Design (CISC 226).",
+        "stack": ["Python", "Unity", "C#"],
+        "imgName": "qsc"
     }
 ]

@@ -1,12 +1,13 @@
 export const lightTheme = {
-  background: '#FFFFFF',
+  background: '#fcfcfc',
   text: '#000000',
-  header: '#019862',
+  header: '#066542',
   blocks: '#FFFFFF',
   blob: '#FFC700',
   sun: '#FFEC40',
   footer: '#F3F3F3',
   textWeight: '400',
+  oppositeTextWeight: '350',
   bold: '600',
 };
 
@@ -21,5 +22,6 @@ export const darkTheme = {
   moon: '#f49bba',
   footer: '#000000',
   textWeight: '350',
+  oppositeTextWeight: '400',
   bold: '550',
 };

@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.background};
   }
 
-  .bold, .subsection span, a {
+  .bold, .subsection span {
     font-weight: ${({ theme }) => theme.bold};
   }
 
@@ -43,8 +43,9 @@ export const GlobalStyles = createGlobalStyle`
       }
     }
     .blob-message {
-      background: ${({ theme }) => theme.blocks};
-      border: 1px solid ${({ theme }) => theme.text};
+      background: ${({ theme }) => theme.header};
+      border: 1px solid ${({ theme }) => theme.background};
+      color: ${({ theme }) => theme.background};
     }
   }
 
@@ -91,11 +92,17 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  .timespan, .stack {
-    color: ${({ theme }) => theme.header};
+  .subtitle {
+    .stack {
+      .stack-tag {
+        background-color: ${({ theme }) => theme.header};
+        color: ${({ theme }) => theme.background};
+        font-weight: ${({ theme }) => theme.oppositeTextWeight};
+      }
+    }
   }
 
- .block {
+ .block, #summary {
      background: ${({ theme }) => theme.blocks};
  }
 

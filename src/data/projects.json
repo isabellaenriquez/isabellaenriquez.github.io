@@ -1,9 +1,18 @@
 [
     {
+        "title": "Haus",
+        "timespan": "September 2021 to March 2022",
+        "summary": "A mobile app that helps your friendships, your wallet, and the environment - one grocery trip at a time.\n\nBuilt as part of the 2021-2022 QTMA product cycle.",
+        "stack": ["Flutter", "Dart", "TypeScript", "Firebase", "Node.js", "NestJS", "MySQL", "Terraform", "Google Cloud"],
+        "links": [
+        ],
+        "imgName": "haus"
+    },
+    {
         "title": "Pandemic Protection",
         "timespan": "January to April 2021",
         "summary": "A 2D platformer that educates young Canadians on COVID-19 safety guidelines.",
-        "stack": "Unity, C#",
+        "stack": ["Unity", "C#"],
         "links": [
             {
                 "name": "GitHub",
@@ -12,10 +21,6 @@
             {
                 "name": "Youtube",
                 "url": "https://www.youtube.com/watch?v=08aMdLG3SLI"
-            },
-            {
-                "name": "Misc",
-                "url": "https://creative.caslab.queensu.ca/~pandemic-protection/Pandemic%20Protection%20Game/"
             }
         ],
         "imgName": "pandemicProtection"
@@ -24,7 +29,7 @@
         "title": "studybuddy",
         "timespan": "January 2021",
         "summary": "The remote student's best friend.",
-        "stack": "React, CSS, TensorFlow",
+        "stack": ["React", "CSS", "TensorFlow"],
         "links": [
             {
                 "name": "GitHub",
@@ -41,7 +46,7 @@
         "title": "leya.",
         "timespan": "January 2021",
         "summary": "A Chrome extension for visual and audial immersion.",
-        "stack": "JavaScript, HTML, CSS, Google Chrome Extension API",
+        "stack": ["JavaScript", "HTML", "CSS", "Google Chrome Extension API"],
         "links": [
             {
                 "name": "GitHub",
@@ -58,7 +63,7 @@
         "title": "Journey",
         "timespan": "November 2020",
         "summary": "A mental health and wellness journaling tool. Awarded \"Most Innovative Project\" at hackHer 2020.",
-        "stack": "React, Express, Firebase, Google Natural Language API",
+        "stack": ["React", "Express", "Firebase", "Google Natural Language API"],
         "links": [
             {
                 "name": "GitHub",
@@ -71,7 +76,7 @@
         "title": "KOSMOS — your virtual makeup bag",
         "timespan":  "August 2020",
         "summary": "Making the makeup community and experience simple and transparent.",
-        "stack": "Python, Django, JavaScript, HTML, Sass, Celery, RabbitMQ",
+        "stack": ["Python", "Django", "JavaScript", "HTML", "SCSS", "Celery", "RabbitMQ"],
         "links": [
             {
                 "name": "GitHub",
@@ -79,22 +84,5 @@
             }
         ],
         "imgName": "kosmos"
-    },
-    {
-        "title": "Bookworm Wannabe",
-        "timespan": "July 2020",
-        "summary": "A simple book review website with user authentication and a database of 5000+ books.",
-        "stack": "Python, Flask, SQLAlchemy, PostgreSQL, HTML, CSS, Goodreads API (now deprecated)",
-        "links": [
-            {
-                "name": "GitHub",
-                "url": "https://github.com/isabellaenriquez/bookworm-wannabe"
-            },
-            {
-                "name": "Youtube",
-                "url":"https://www.youtube.com/watch?v=XaUTkiJLEHQ&list=PLH2wYuURvrWQskB8BvBHlLlFj8IeHopvF&index=2"
-            }
-        ],
-        "imgName": "bookworm-wannabe"
     }
 ]

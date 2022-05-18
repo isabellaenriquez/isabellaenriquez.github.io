@@ -14,7 +14,7 @@ export default class App extends React.Component {
       return (
         <ExpBlock
           key={node.company}
-          title={`${node.position} @ ${node.company}`}
+          title={node.company}
           timespan={node.timespan}
           summary={node.summary}
           stack={node.stack}
@@ -47,11 +47,6 @@ export default class App extends React.Component {
         section: document.getElementById('about-me'),
         show: false,
         msg: 'Isabella is hoping to start a blog soon, so stay tuned!',
-      },
-      {
-        section: document.getElementById('work'),
-        show: false,
-        msg: "Next summer, Isabella will be working at Linkedin's head office as an UI Engineer Intern!",
       },
     ];
     window.addEventListener(
@@ -128,61 +123,49 @@ export default class App extends React.Component {
                 <header>
                   <h1>About Me</h1>
                 </header>
-                <p>
-                  I started coding in the 10th grade. I meant to take a graphic
-                  design course but 15-year old Isabella did not actually read
-                  the description of the "Computer Studies" course. I think it
-                  worked out though.
-                </p>
-                <div className='block-grid'>
-                  <div className='block rounded-block'>
-                    <h2>&#129302; Tech Stack</h2>
-                    <div className='subsection'>
-                      <span>Languages:</span>Python, JavaScript, TypeScript,
-                      HTML, CSS, Sass, Java, C#, C, Dart, SQL
-                    </div>
-                    <div className='subsection'>
-                      <span>Frameworks:</span>
-                      Flask, Django, React, Svelte, Cypress, JUnit, Gatsby,
-                      Flutter, Selenium
-                    </div>
-                    <div className='subsection'>
-                      <span>Other tools and skills:</span>
-                      Git/GitHub, Unity, Linux, Figma, REST, CI/CD
-                    </div>
-                  </div>
-                  <div className='block rounded-block'>
-                    <h2>&#129299; Interests</h2>
-                    <div className='subsection'>
-                      <span>Professional Interests:</span>
-                      All Things Web (dev/design/a11y), Full Stack Development,
-                      Tech for Social Impact
-                    </div>
-                    <div className='subsection'>
-                      <span>Personal Interests:</span>
-                      Cultural Geography, Fashion, History, Movies, Mythology,
-                      Travel, Video Games, Writing
-                    </div>
-                  </div>
+                <div id='summary'>
+                  <p>A quick summary:</p>
+                  <p>&#128105; she/her</p>
+                  <p>
+                    &#128187; Started coding in the 10th grade by accidentally
+                    taking a "Computer Studies" course
+                  </p>
+                  <p>
+                    &#128218; Rising senior at Queen's University working
+                    towards a Bachelor of Computing with a specialization in
+                    Software Design
+                  </p>
+                  <p>
+                    &#128084; Professional interests: Full Stack Web
+                    Development, Web Accessibility, Tech for Social Impact
+                  </p>
+                  <p>
+                    &#129412; (un)professional interests: Cultural Geography,
+                    History, Mythology,{' '}
+                    <a href='https://goodreads.com/isabellaenriquez'>Reading</a>
+                    , Travel, Video Games, Writing
+                  </p>
+                  {/* <p>Some fun facts:</p>
+                  <ul id='fun-facts'>
+                    <li>
+                      For my Food History class final, I wrote and designed a{' '}
+                      <a href='https://issuu.com/isabella4tech2020pls/docs/s._oleracea_magazine_for_issuu_'>
+                        magazine all about select periods in the history of
+                        spinach
+                      </a>
+                      .
+                    </li>
+                  </ul> */}
+                  <p>
+                    &#9749; &#10024; Reach me at my{' '}
+                    <a href='mailto:isabella.enriquez@queensu.ca'>email</a> or{' '}
+                    <a href='https://linkedin.com/in/isabellaenriquez'>
+                      LinkedIn
+                    </a>{' '}
+                    to chat about opportunities (resume available upon request),
+                    any one of my interests, or whatever :))
+                  </p>
                 </div>
-                <hr />
-                <p>
-                  Currently, I’m a junior at Queen’s University studying towards
-                  a Bachelor of Computing with a specialization in Software
-                  Design. Beyond my professional career, I’m involved in a few
-                  extra-curricular activities and I’ll sometimes work on coding
-                  projects in my free time.
-                </p>
-                <br />
-                <p>
-                  Feel free to reach out to me at{' '}
-                  <a href='mailto:isabella.enriquez@queensu.ca'>
-                    isabella.enriquez@queensu.ca
-                  </a>
-                  ! I’d love to chat, whether it be about opportunities (current
-                  resume available upon request), any one of my interests, my
-                  writing, or even just how you’re doing. I’m here to listen.
-                </p>
               </section>
               <section
                 id='work'
@@ -200,8 +183,8 @@ export default class App extends React.Component {
                   <h1>Projects</h1>
                 </header>
                 <p>
-                  &#128296; Innovating with code and design. Check out more of
-                  my projects on my{' '}
+                  &#128296; Innovating with code and design. Below are select
+                  projects, check out more on my{' '}
                   <a href='https://github.com/isabellaenriquez'>GitHub</a>!
                 </p>
                 <div className='block-grid'>{this.getProjectBlocks()}</div>

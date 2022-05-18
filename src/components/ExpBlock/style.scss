@@ -16,14 +16,23 @@
       white-space: pre-line;
     }
 
-    .timespan,
-    .stack {
-      font-weight: bold;
-    }
+    .subtitle {
+      font-size: small; 
+      margin-top: $spacing-small;
+  
 
-    .stack {
-      margin-top: $spacing-medium;
-      margin-bottom: 0;
+      .stack {
+        margin: $spacing-small 0;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $spacing-small;
+        row-gap: $spacing-small;
+        .stack-tag {
+          border-radius: 5px;
+          padding: $spacing-small;
+          // font-weight: bold;
+        }
+      }
     }
 
     h2 {

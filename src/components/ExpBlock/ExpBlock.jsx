@@ -55,6 +55,15 @@ export default class ExpBlock extends React.Component {
     return;
   }
 
+  generateStackTags() {
+    if (this.stack.length) {
+      return this.stack.map((node) => {
+        return <span className='stack-tag'>{node}</span>;
+      });
+    }
+    return;
+  }
+
   getExpImage(expImages) {
     let img = expImages.find((node) => node.node.name === this.imgName);
 
@@ -95,9 +104,10 @@ export default class ExpBlock extends React.Component {
             <img src={this.getExpImage(data.allFile.edges)} alt={this.title} />
             <div className='info'>
               <h2>{this.title}</h2>
-              <p className='timespan'>{this.timespan}</p>
+              <div className='subtitle'>
+                <div className='stack'>{this.generateStackTags()}</div>
+              </div>
               <p>{this.summary}</p>
-              <p className='stack'>Stack: {this.stack}</p>
               <div className='social-icons projects'>
                 {this.generateLinkIcons(data)}
               </div>
