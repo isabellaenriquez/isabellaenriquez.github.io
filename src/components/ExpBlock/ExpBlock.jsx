@@ -20,7 +20,7 @@ export default class ExpBlock extends React.Component {
   generateLinkIcons(iconData) {
     if (this.links.length) {
       return this.links.map((link) => {
-        if (link.url === '') return;
+        if (link.url === '') return <></>;
         return (
           <a
             key={link.name + '-icon'}

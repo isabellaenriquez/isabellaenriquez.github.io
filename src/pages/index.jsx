@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet';
 import OgImage from '../../static/site-preview.jpg';
 
 export default function Index() {
-  const [theme, toggleTheme, themeLoaded] = useDarkMode();
+  const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   const Toggler = () => (
