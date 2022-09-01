@@ -48,6 +48,11 @@ export default class App extends React.Component {
         show: false,
         msg: 'Isabella is hoping to start a blog soon, so stay tuned!',
       },
+      {
+        section: document.getElementById('work'),
+        show: false,
+        msg: 'Isabella is currently seeking out 2023 New Grad SWE opportunities!',
+      },
     ];
     window.addEventListener(
       'scroll',
@@ -136,26 +141,15 @@ export default class App extends React.Component {
                     Software Design
                   </p>
                   <p>
-                    &#128084; Professional interests: Full Stack Web
-                    Development, Web Accessibility, Tech for Social Impact
+                    &#128084; Professional interests: Frontend Development, Full
+                    Stack Development, Web Accessibility, Tech for Social Impact
                   </p>
                   <p>
                     &#129412; (un)professional interests: Cultural Geography,
                     History, Mythology,{' '}
                     <a href='https://goodreads.com/isabellaenriquez'>Reading</a>
-                    , Travel, Video Games, Writing
+                    , Travel, Video Games, Working Out, Writing
                   </p>
-                  {/* <p>Some fun facts:</p>
-                  <ul id='fun-facts'>
-                    <li>
-                      For my Food History class final, I wrote and designed a{' '}
-                      <a href='https://issuu.com/isabella4tech2020pls/docs/s._oleracea_magazine_for_issuu_'>
-                        magazine all about select periods in the history of
-                        spinach
-                      </a>
-                      .
-                    </li>
-                  </ul> */}
                   <p>
                     &#9749; &#10024; Reach me at my{' '}
                     <a href='mailto:isabella.enriquez@queensu.ca'>email</a> or{' '}
