@@ -3,8 +3,8 @@
         "company": "LinkedIn",
         "position": "UI Engineer Intern",
         "timespan": "May to August 2022",
-        "summary": "Currently developing as a UI Engineer Intern with the LinkedIn Talent Solutions User Experience Team!",
-        "stack": ["TBD"],
+        "summary": "Positively impacted LinkedIn Talent Solutions product teams as part of the UI Infrastructure Team.\n\nMy main project was an internal, centralized platform that automatically visualized technical debt for a specified organization, processing and displaying the latest data with a dynamically rendered data visualization. The end goal? Improved code craftsmanship across the organization!",
+        "stack": ["React", "TypeScript", "Jest", "D3", "Ember"],
         "imgName": "linkedin"
     },
     {
@@ -12,14 +12,14 @@
         "position": "Frontend Developer Intern",
         "timespan": "May to August 2021",
         "summary": "Worked as a Frontend Developer Intern—the first intern ever on the Developer Experience Team!\n\nAs part of this team, I empowered developers with powerful APIs and beautiful web components that seamlessly integrate into existing applications.",
-        "stack": ["Svelte", "JavaScript", "TypeScript", "SCSS", "Cypress"],
+        "stack": ["Svelte", "JavaScript", "TypeScript", "Sass", "Cypress"],
         "imgName": "nylas"
     }, 
     {
         "company": "Queen's School of Computing",
         "position": "Teaching Assistant",
-        "timespan": "January to April 2021, September 2021 to April 2022",
-        "summary": "Educated and evaluated computer science students at the university level as an Undergraduate Teaching Assistant for three academic semesters.\n\nCourses: Introduction to Computing Science I (CISC 121), Logic for Computing (CISC 204), and Game Design (CISC 226).",
+        "timespan": "January to April 2021, September 2021 to April 2022, September 2022 to April 2023",
+        "summary": "Educated and evaluated computer science students at the university level as an Undergraduate Teaching Assistant for four academic semesters.\n\nCourses: Introduction to Computing Science I (CISC 121), Logic for Computing (CISC 204), and Game Design (CISC 226).",
         "stack": ["Python", "Unity", "C#"],
         "imgName": "qsc"
     }
