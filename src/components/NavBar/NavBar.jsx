@@ -24,10 +24,10 @@ export default class NavBar extends React.Component {
         name: 'Projects',
         url: '#projects',
       },
-      // {
-      //   name: 'Blog',
-      //   url: '/blog',
-      // },
+      {
+        name: 'Blog',
+        url: 'https://medium.com/@isabellapenriquez',
+      },
     ];
   }
 
