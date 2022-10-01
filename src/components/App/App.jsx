@@ -44,9 +44,9 @@ export default class App extends React.Component {
   componentDidMount() {
     const blobSections = [
       {
-        section: document.getElementById('about-me'),
+        section: document.getElementById('projects'),
         show: false,
-        msg: 'Isabella is hoping to start a blog soon, so stay tuned!',
+        msg: 'If you have a cool project opportunity, Isabella would love to hear about it!',
       },
       {
         section: document.getElementById('work'),
@@ -133,13 +133,10 @@ export default class App extends React.Component {
                   <p>&#128105; she/her</p>
                   <p>
                     &#128187; Started coding in the 10th grade by accidentally
-                    taking a "Computer Studies" course
+                    taking a "Computer Studies" course (but as Bob Ross would
+                    say, "There are no mistakes, just happy accidents" &#10024;)
                   </p>
-                  <p>
-                    &#128218; Rising senior at Queen's University working
-                    towards a Bachelor of Computing with a specialization in
-                    Software Design
-                  </p>
+                  <p>&#128218; Senior CS Student at Queen's University</p>
                   <p>
                     &#128084; Professional interests: Frontend Development, Full
                     Stack Development, Web Accessibility, Tech for Social Impact
@@ -148,13 +145,18 @@ export default class App extends React.Component {
                     &#129412; (un)professional interests: Cultural Geography,
                     History, Mythology,{' '}
                     <a href='https://goodreads.com/isabellaenriquez'>Reading</a>
-                    , Travel, Video Games, Working Out, Writing
+                    , Travel, Video Games, Working Out,{' '}
+                    <a href='https://medium.com/@isabellapenriquez'>Writing</a>
                   </p>
                   <p>
                     &#9749; &#10024; Reach me at my{' '}
-                    <a href='mailto:isabella.enriquez@queensu.ca'>email</a> or{' '}
+                    <a href='mailto:isabella.enriquez@queensu.ca'>email</a>,{' '}
                     <a href='https://linkedin.com/in/isabellaenriquez'>
                       LinkedIn
+                    </a>{' '}
+                    , or book on my{' '}
+                    <a href='https://calendly.com/isabellaenriquez/1-on-1-with-isabella'>
+                      Calendly
                     </a>{' '}
                     to chat about opportunities (resume available upon request),
                     any one of my interests, or whatever :))
