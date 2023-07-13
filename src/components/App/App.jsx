@@ -20,6 +20,7 @@ export default class App extends React.Component {
           stack={node.stack}
           links={node.links}
           imgName={node.imgName}
+          secondaryImgName={node.secondaryImgName}
         />
       );
     });
@@ -36,6 +37,7 @@ export default class App extends React.Component {
           stack={node.stack}
           links={node.links}
           imgName={node.imgName}
+          secondaryImgName={node.secondaryImgName}
         />
       );
     });
@@ -44,14 +46,14 @@ export default class App extends React.Component {
   componentDidMount() {
     const blobSections = [
       {
+        section: document.getElementById('home'),
+        show: false,
+        msg: 'Welcome! Version 3 of this website is coming soon!',
+      },
+      {
         section: document.getElementById('projects'),
         show: false,
         msg: 'If you have a cool project opportunity, Isabella would love to hear about it!',
-      },
-      {
-        section: document.getElementById('work'),
-        show: false,
-        msg: 'Isabella is currently seeking out 2023 New Grad SWE opportunities!',
       },
     ];
     window.addEventListener(
@@ -133,13 +135,12 @@ export default class App extends React.Component {
                   <p>&#128105; she/her</p>
                   <p>
                     &#128187; Started coding in the 10th grade by accidentally
-                    taking a "Computer Studies" course (but as Bob Ross would
-                    say, "There are no mistakes, just happy accidents" &#10024;)
+                    taking a "Computer Studies" course...
                   </p>
-                  <p>&#128218; Senior CS Student at Queen's University</p>
+                  <p>&#127745; And now I'm a Software Engineer at Sentry!</p>
                   <p>
-                    &#128084; Professional interests: Frontend Development, Full
-                    Stack Development, Web Accessibility, Tech for Social Impact
+                    &#128084; Professional interests: Full Stack Development,
+                    Web Accessibility, Tech for Social Impact, Mentorship
                   </p>
                   <p>
                     &#129412; (un)professional interests: Cultural Geography,
@@ -150,7 +151,7 @@ export default class App extends React.Component {
                   </p>
                   <p>
                     &#9749; &#10024; Reach me at my{' '}
-                    <a href='mailto:isabella.enriquez@queensu.ca'>email</a>,{' '}
+                    <a href='mailto:isabellapenriquez@gmail.com'>email</a>,{' '}
                     <a href='https://linkedin.com/in/isabellaenriquez'>
                       LinkedIn
                     </a>{' '}
@@ -200,6 +201,9 @@ export default class App extends React.Component {
             <footer id='footer'>
               <h2>Aw, leaving already? Let's stay connected!</h2>
               <Socials />
+              <p className='tiny-text copyright'>
+                Design & Code ©️ Isabella Enriquez
+              </p>
               <div id='footer-blob' className='blob-friend'>
                 <Blob />
                 <span className='blob-message'>I'll miss you! &#10084;</span>

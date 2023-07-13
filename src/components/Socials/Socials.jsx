@@ -9,7 +9,7 @@ export default class Socials extends React.Component {
     this.socialIcons = [
       {
         name: 'Email',
-        url: 'mailto:isabella.enriquez@queensu.ca',
+        url: 'mailto:isabellapenriquez@gmail.com',
       },
       {
         name: 'Linkedin',
