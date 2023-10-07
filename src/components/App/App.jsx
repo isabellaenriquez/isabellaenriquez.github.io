@@ -137,7 +137,10 @@ export default class App extends React.Component {
                     &#128187; Started coding in the 10th grade by accidentally
                     taking a "Computer Studies" course...
                   </p>
-                  <p>&#127745; And now I'm a Software Engineer at Sentry!</p>
+                  <p>
+                    &#127745; And now I'm a Software Engineer at{' '}
+                    <a href='https://sentry.io/'>Sentry</a>
+                  </p>
                   <p>
                     &#128084; Professional interests: Full Stack Development,
                     Web Accessibility, Tech for Social Impact, Mentorship
@@ -151,16 +154,11 @@ export default class App extends React.Component {
                   </p>
                   <p>
                     &#9749; &#10024; Reach me at my{' '}
-                    <a href='mailto:isabellapenriquez@gmail.com'>email</a>,{' '}
+                    <a href='mailto:isabellapenriquez@gmail.com'>email</a> or{' '}
                     <a href='https://linkedin.com/in/isabellaenriquez'>
                       LinkedIn
                     </a>{' '}
-                    , or book on my{' '}
-                    <a href='https://calendly.com/isabellaenriquez/1-on-1-with-isabella'>
-                      Calendly
-                    </a>{' '}
-                    to chat about opportunities (resume available upon request),
-                    any one of my interests, or whatever :))
+                    :))
                   </p>
                 </div>
               </section>
