@@ -8,6 +8,23 @@ import Sun from '../images/sunFriend.svg';
 import Moon from '../images/moonFriend.svg';
 import { Helmet } from 'react-helmet';
 import OgImage from '../../static/site-preview.jpg';
+import * as Sentry from '@sentry/gatsby';
+
+Sentry.init({
+  dsn: 'https://594b1b365f452a9e0a502a72a2c211d1@o4505641601007616.ingest.sentry.io/4505641604349952',
+  integrations: [
+    new Sentry.BrowserTracing({
+      // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+      tracePropagationTargets: ['localhost', 'https:yourserver.io/api/'],
+    }),
+    new Sentry.Replay(),
+  ],
+  // Performance Monitoring
+  tracesSampleRate: 1.0, // Capture 100% of the transactions, reduce in production!
+  // Session Replay
+  replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+  replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+});
 
 export default function Index() {
   const [theme, toggleTheme] = useDarkMode();
