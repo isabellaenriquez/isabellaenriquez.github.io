@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/isabellaenriquez/isabellaenriquez.github.io#readme",
   "dependencies": {
-    "gatsby": "^4.22.0",
+    "gatsby": "^5.12.9",
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sass": "^5.22.0",
     "gatsby-plugin-styled-components": "^5.25.0",
